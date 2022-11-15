@@ -1,4 +1,6 @@
 import React from "react"
+import mockWeathers from "./mockWeathers"
+import mockUserCities from "./mockUserCities"
 
 const App = ({
   logged_in,
