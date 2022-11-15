@@ -16,7 +16,7 @@ const App = ({
   console.log("sign_out_route:", sign_out_route)
   return (
     <>
-      <h1>CLOUDY App</h1>
+      <h1>CLOUDY App yay</h1>
     </>
   )
 }
