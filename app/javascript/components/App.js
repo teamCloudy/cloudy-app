@@ -1,4 +1,6 @@
 import React from "react"
+import mockWeathers from "./mockWeathers"
+import mockUserCities from "./mockUserCities"
 
 const App = ({
   logged_in,
@@ -14,7 +16,7 @@ const App = ({
   console.log("sign_out_route:", sign_out_route)
   return (
     <>
-      <h1>CLOUDY App</h1>
+      <h1>Cloudy App</h1>
     </>
   )
 }
