@@ -28,21 +28,3 @@ user_cities_seeds.each do |city|
     user.user_cities.create(city)
     p city
 end
-
-
-# weathers_seeds = [
-#     {
-#     temperature: 74,
-#     time: 7:00 
-#     date:
-#     current_weather:
-#     uv_index:
-#     wind_speed:
-#     humidity:
-#     description: "lorem ipsum"
-#     },
-# ]
-
-# weathers_seeds.each do ||
-#     user.
-# end
