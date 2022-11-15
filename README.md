@@ -1,4 +1,3 @@
-
 #user city database
 rails g resource User_city user_id:integer weather_id:integer city_name:string country_name:string notes:text 
 
