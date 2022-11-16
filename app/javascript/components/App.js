@@ -1,23 +1,38 @@
-import React from "react"
+import React, { useState} from "react"
 import mockWeathers from "./mockWeathers"
 import mockUserCities from "./mockUserCities"
+import Footer from "./components/Footer"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Header from "./components/Header"
+import CityEdit from "./pages/CityEdit"
+import CityIndex from "./pages/CityIndex"
+import CityNew from "./pages/CityNew"
+import CityShow from "./pages/CityShow"
+import AboutUs from "./pages/AboutUs"
+import Home from "./pages/Home"
+import NotFound from "./pages/NotFound"
+import ProtectedCityShow from "./pages/ProtectedCityShow"
+import ProtectedCityIndex from "./pages/ProtectedCityIndex"
 
-const App = ({
-  logged_in,
-  current_user,
-  new_user_route,
-  sign_in_route,
-  sign_out_route
-}) => {
-  console.log("logged_in:", logged_in)
-  console.log("current_user:", current_user)
-  console.log("new_user_route:", new_user_route)
-  console.log("sign_in_route:", sign_in_route)
-  console.log("sign_out_route:", sign_out_route)
+
+const App = (props) => {
+  const [cities, setCities] = useState([])
+
+  
+
   return (
-    <>
-      <h1>Cloudy App</h1>
-    </>
+    <BrowserRouter>
+      <Header {...props} />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/cityindex" element={<CityIndex />} />
+        <Route path="/cityshow" element={<CityShow />} />
+        <Route path="/citynew" element={<CityNew />} />
+        <Route path="/cityedit" element={<CityEdit />} />
+        <Route element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   )
 }
 
