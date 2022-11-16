@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe UserCity, type: :model do
-  let(:user) { User.create email:"test@gmail.com", password:"password", password_confirmation:"password" }
+  let(:user) { User.create email:"test@gmail.com", password:"password", password_confirmation:"password", username: "testuser" }
 
   it "should have a valid city name" do
     city = user.user_cities.new(
