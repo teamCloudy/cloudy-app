@@ -5,15 +5,17 @@ class UserCitiesController < ApplicationController
     end
 
     def create
+        city = UserCity.create(user_city_params)
+        if city.valid?
+            render json: city
+        else
+            render json: city.errors, status: 422
+        end
     end
 
-    def update
-    end
+    private
 
-    def destroy
+    def user_city_params
+        params.require(:user_city).permit(:user_id, :weather_id, :city_name, :country_name, :notes)
     end
-end
-
-private
-def user_city_params
 end

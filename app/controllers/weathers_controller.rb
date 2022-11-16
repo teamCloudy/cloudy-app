@@ -1,2 +1,3 @@
 class WeathersController < ApplicationController
+    
 end

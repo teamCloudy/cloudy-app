@@ -30,6 +30,52 @@ RSpec.describe "UserCities", type: :request do
   end
 
   # -----create-----
+  describe "POST /create" do
+    it "creates a new city" do
+      user_city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "San Jose",
+          country_name: "United States",
+          notes: "notes blah blah"
+        }
+      }
+
+      post "/user_cities", params: user_city_params
+      JSON.parse(response.body)
+      city = UserCity.first
+      expect(city["city_name"]).to eq "San Jose"
+      expect(city["country_name"]).to eq "United States"
+      expect(city["notes"]).to eq "notes blah blah"
+    end
+    it 'cannot create a new card without a city' do
+      city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          country_name: "United States"
+        }
+      }
+      post '/user_cities', params: city_params
+      error_response = JSON.parse(response.body)
+      expect(error_response['city_name']).to include "can't be blank"
+      expect(response).to have_http_status(422)
+    end
+    it 'cannot create a new card without a country' do
+      city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "San Jose"
+        }
+      }
+      post '/user_cities', params: city_params
+      error_response = JSON.parse(response.body)
+      expect(error_response['country_name']).to include "can't be blank"
+      expect(response).to have_http_status(422)
+    end
+  end
 
   # -----update-----
 
