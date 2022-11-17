@@ -22,11 +22,14 @@ const App = (props) => {
 
   return (
     <BrowserRouter>
-      <Header {...props} />
+      <Header {...props}/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/cityindex" element={<CityIndex />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/protectedcityindex" element={<ProtectedCityIndex />} />
         <Route path="/cityshow" element={<CityShow />} />
+        <Route path="/protectedcityshow" element={<ProtectedCityShow />} />
         <Route path="/citynew" element={<CityNew />} />
         <Route path="/cityedit" element={<CityEdit />} />
         <Route element={<NotFound />} />
