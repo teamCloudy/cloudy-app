@@ -16,8 +16,8 @@ import ProtectedCityIndex from "./pages/ProtectedCityIndex"
 
 
 const App = (props) => {
-  const [cities, setCities] = useState([])
-
+  const [cities, setCities] = useState(mockUserCities);
+  const [weathers, setWeathers] = useState(mockWeathers);
   
 
   return (
@@ -25,7 +25,7 @@ const App = (props) => {
       <Header {...props}/>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/cityindex" element={<CityIndex />} />
+        <Route path="/cityindex" element={<CityIndex cities={cities} weathers={weathers} />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/protectedcityindex" element={<ProtectedCityIndex />} />
         <Route path="/cityshow" element={<CityShow />} />
