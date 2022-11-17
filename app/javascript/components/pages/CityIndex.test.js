@@ -10,17 +10,14 @@ describe("<CityIndex />", () => {
     render(<CityIndex />, div);
   });
 
-  describe("<CityIndex />", () => {
     it("renders without crashing with mockUserCities", () => {
       const div = document.createElement("div");
       render(<CityIndex mockUserCities={mockUserCities} />, div);
     });
-  });
 
-  describe("<CityIndex />", () => {
     it("renders without crashing with mockWeathers", () => {
       const div = document.createElement("div");
       render(<CityIndex mockWeathers={mockWeathers} />, div);
     });
-  });
+
 });
