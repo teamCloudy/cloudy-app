@@ -24,10 +24,15 @@ class UserCitiesController < ApplicationController
     end
 
     def destroy
-    end
+        city = UserCity.find(params[:id])
+        if city.destroy
+          render json: city
+        else
+          render json: city.errors, status: 422
+        end
+      end
 
     private
-
     def user_city_params
         params.require(:user_city).permit(:user_id, :weather_id, :city_name, :country_name, :notes)
     end
