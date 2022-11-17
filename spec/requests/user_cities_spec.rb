@@ -79,34 +79,6 @@ RSpec.describe "UserCities", type: :request do
 
   # -----update-----
   describe "PATCH /update" do
-    it 'cannot create a new card without a city' do
-      user_city_params = {
-        user_city: {
-          user_id: user.id,
-          weather_id: weather.id,
-          country_name: "United States"
-        }
-      }
-      post '/user_cities', params: user_city_params
-      error_response = JSON.parse(response.body)
-      expect(error_response['city_name']).to include "can't be blank"
-      expect(response).to have_http_status(422)
-    end
-
-    it 'cannot create a new card without a country' do
-      user_city_params = {
-        user_city: {
-          user_id: user.id,
-          weather_id: weather.id,
-          city_name: "San Jose"
-        }
-      }
-      post '/user_cities', params: user_city_params
-      error_response = JSON.parse(response.body)
-      expect(error_response['country_name']).to include "can't be blank"
-      expect(response).to have_http_status(422)
-    end
-
     it("updates city listing") do
       user_city_params = {
         user_city: {
@@ -138,6 +110,66 @@ RSpec.describe "UserCities", type: :request do
       expect(city.city_name).to eq "Atlanta"
       expect(city.country_name).to eq "USA"
       expect(city.notes).to eq "TWD originated here"
+    end
+
+    it("tests updates for missing city name") do
+      user_city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "San Jose",
+          country_name: "United States",
+          notes: "notes blah blah"
+        }
+      }
+
+      post "/user_cities", params: user_city_params
+      city = UserCity.first
+      JSON.parse(response.body)
+
+      update_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "",
+          country_name: "USA",
+          notes: "TWD originated here"
+        }
+      }
+
+      patch "/user_cities/#{city.id}", params: update_params
+      city = UserCity.first
+      expect(response).to have_http_status(422)
+    end
+
+    it("tests updates for missing country name") do
+      user_city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "San Jose",
+          country_name: "USA",
+          notes: "notes blah blah"
+        }
+      }
+
+      post "/user_cities", params: user_city_params
+      city = UserCity.first
+      JSON.parse(response.body)
+
+      update_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "Atlanta",
+          country_name: "",
+          notes: "TWD originated here"
+        }
+      }
+
+      patch "/user_cities/#{city.id}", params: update_params
+      city = UserCity.first
+      expect(response).to have_http_status(422)
     end
   end
 
