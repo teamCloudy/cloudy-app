@@ -13,6 +13,19 @@ class UserCitiesController < ApplicationController
         end
     end
 
+    def update
+        city = UserCity.find(params[:id])
+        city.update(user_city_params)
+        if city.valid?
+            render json: city
+        else
+            render json: city.errors, status: 422
+        end
+    end
+
+    def destroy
+    end
+
     private
 
     def user_city_params

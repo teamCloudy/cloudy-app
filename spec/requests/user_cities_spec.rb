@@ -78,6 +78,40 @@ RSpec.describe "UserCities", type: :request do
   end
 
   # -----update-----
+  describe "PATCH /update" do
+    it("updates city listing") do
+      user_city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "San Jose",
+          country_name: "United States",
+          notes: "notes blah blah"
+        }
+      }
+
+      post "/user_cities", params: user_city_params
+      city = UserCity.first
+      JSON.parse(response.body)
+
+      update_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "Atlanta",
+          country_name: "USA",
+          notes: "TWD originated here"
+        }
+      }
+
+      patch "/user_cities/#{city.id}", params: update_params
+      city = UserCity.first
+      expect(response).to have_http_status(200)
+      expect(city.city_name).to eq "Atlanta"
+      expect(city.country_name).to eq "USA"
+      expect(city.notes).to eq "TWD originated here"
+    end
+  end
 
   # -----destroy-----
 
