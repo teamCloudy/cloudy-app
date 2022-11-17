@@ -24,7 +24,7 @@ const App = (props) => {
     <BrowserRouter>
       <Header {...props}/>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Home {...props} />} />
         <Route path="/cityindex" element={<CityIndex cities={cities} weathers={weathers} />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/protectedcityindex" element={<ProtectedCityIndex />} />
