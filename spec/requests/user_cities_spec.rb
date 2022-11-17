@@ -80,5 +80,21 @@ RSpec.describe "UserCities", type: :request do
   # -----update-----
 
   # -----destroy-----
-
+  describe "DELETE /destroy" do
+    it "deletes a city card" do
+      city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "San Jose",
+          country_name: "United States",
+          notes: "notes blah blah"
+        }
+      }
+      post "/user_cities", params: city_params
+      city = UserCity.first
+      delete "/user_cities/#{city.id}"
+      expect(response).to have_http_status(200)
+    end
+  end
 end

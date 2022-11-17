@@ -13,6 +13,15 @@ class UserCitiesController < ApplicationController
         end
     end
 
+    def destroy
+        city = UserCity.find(params[:id])
+        if city.destroy
+          render json: city
+        else
+          render json: city.errors, status: 422
+        end
+      end
+
     private
 
     def user_city_params
