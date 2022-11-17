@@ -10,14 +10,13 @@ describe("<CityIndex />", () => {
     render(<CityIndex />, div);
   });
 
-    it("renders without crashing with mockUserCities", () => {
-      const div = document.createElement("div");
-      render(<CityIndex mockUserCities={mockUserCities} />, div);
-    });
+  it("renders without crashing with mockUserCities", () => {
+    const div = document.createElement("div");
+    render(<CityIndex mockUserCities={mockUserCities} />, div);
+  });
 
-    it("renders without crashing with mockWeathers", () => {
-      const div = document.createElement("div");
-      render(<CityIndex mockWeathers={mockWeathers} />, div);
-    });
-
+  it("renders without crashing with mockWeathers", () => {
+    const div = document.createElement("div");
+    render(<CityIndex mockWeathers={mockWeathers} />, div);
+  });
 });
