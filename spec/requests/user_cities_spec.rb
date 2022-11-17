@@ -50,27 +50,27 @@ RSpec.describe "UserCities", type: :request do
       expect(city["notes"]).to eq "notes blah blah"
     end
     it 'cannot create a new card without a city' do
-      city_params = {
+      user_city_params = {
         user_city: {
           user_id: user.id,
           weather_id: weather.id,
           country_name: "United States"
         }
       }
-      post '/user_cities', params: city_params
+      post '/user_cities', params: user_city_params
       error_response = JSON.parse(response.body)
       expect(error_response['city_name']).to include "can't be blank"
       expect(response).to have_http_status(422)
     end
     it 'cannot create a new card without a country' do
-      city_params = {
+      user_city_params = {
         user_city: {
           user_id: user.id,
           weather_id: weather.id,
           city_name: "San Jose"
         }
       }
-      post '/user_cities', params: city_params
+      post '/user_cities', params: user_city_params
       error_response = JSON.parse(response.body)
       expect(error_response['country_name']).to include "can't be blank"
       expect(response).to have_http_status(422)
@@ -79,6 +79,34 @@ RSpec.describe "UserCities", type: :request do
 
   # -----update-----
   describe "PATCH /update" do
+    it 'cannot create a new card without a city' do
+      user_city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          country_name: "United States"
+        }
+      }
+      post '/user_cities', params: user_city_params
+      error_response = JSON.parse(response.body)
+      expect(error_response['city_name']).to include "can't be blank"
+      expect(response).to have_http_status(422)
+    end
+
+    it 'cannot create a new card without a country' do
+      user_city_params = {
+        user_city: {
+          user_id: user.id,
+          weather_id: weather.id,
+          city_name: "San Jose"
+        }
+      }
+      post '/user_cities', params: user_city_params
+      error_response = JSON.parse(response.body)
+      expect(error_response['country_name']).to include "can't be blank"
+      expect(response).to have_http_status(422)
+    end
+
     it("updates city listing") do
       user_city_params = {
         user_city: {
