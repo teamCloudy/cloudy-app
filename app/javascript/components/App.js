@@ -27,7 +27,7 @@ const App = (props) => {
         <Route exact path="/" element={<Home />} />
         <Route path="/cityindex" element={<CityIndex cities={cities} weathers={weathers} />} />
         <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/protectedcityindex" element={<ProtectedCityIndex />} />
+        <Route path="/protectedcityindex" element={<ProtectedCityIndex cities={cities} weathers={weathers} {...props}/>} />
         <Route path="/cityshow" element={<CityShow />} />
         <Route path="/protectedcityshow" element={<ProtectedCityShow />} />
         <Route path="/citynew" element={<CityNew />} />
