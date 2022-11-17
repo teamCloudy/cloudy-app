@@ -1,33 +1,84 @@
 const user_cities = [
     {
-        id: 1,
-        user_id: 1,
-        weather_id: 1,
-        city_name: "San Diego",
-        country_name: "United States",
-        notes: "Lorem Ipsum"
+      id: 1,
+      user_id: 1,
+      weather_id: 1,
+      city_name: "San Diego",
+      country_name: "United States",
+      notes: "Lorem Ipsum",
     },
     {
-        id: 2,
-        user_id: 2,
-        weather_id: 2,
-        city_name: "Chicago",
-        country_name: "United States",
-        notes: "Lorem Ipsum"
+      id: 2,
+      user_id: 2,
+      weather_id: 2,
+      city_name: "Chicago",
+      country_name: "United States",
+      notes: "Lorem Ipsum",
     },
     {
-        id: 3,
-        user_id: 3,
-        weather_id: 3,
-        city_name: "Miami",
-        country_name: "United States",
-        notes: "Lorem Ipsum"
+      id: 3,
+      user_id: 3,
+      weather_id: 3,
+      city_name: "Miami",
+      country_name: "United States",
+      notes: "Lorem Ipsum",
     },
-]
-
-
-export default user_cities
-
-
-
-
+    {
+      id: 4,
+      user_id: 4,
+      weather_id: 4,
+      city_name: "Oakland",
+      country_name: "United States",
+      notes: "Lorem Ipsum",
+    },
+    {
+      id: 5,
+      user_id: 5,
+      weather_id: 5,
+      city_name: "Carlsbad",
+      country_name: "United States",
+      notes: "Lorem Ipsum",
+    },
+    {
+      id: 6,
+      user_id: 6,
+      weather_id: 6,
+      city_name: "San Leandro",
+      country_name: "United States",
+      notes: "Lorem Ipsum",
+    },
+    {
+      id: 7,
+      user_id: 7,
+      weather_id: 7,
+      city_name: "Hayward",
+      country_name: "United States",
+      notes: "Lorem Ipsum",
+    },
+    {
+      id: 8,
+      user_id: 8,
+      weather_id: 8,
+      city_name: "Wuhan",
+      country_name: "China",
+      notes: "Lorem Ipsum",
+    },
+    {
+      id: 9,
+      user_id: 9,
+      weather_id: 9,
+      city_name: "Paris",
+      country_name: "France",
+      notes: "Lorem Ipsum",
+    },
+    {
+      id: 10,
+      user_id: 10,
+      weather_id: 10,
+      city_name: "Heber City",
+      country_name: "United States",
+      notes: "Lorem Ipsum",
+    },
+  ];
+  
+  export default user_cities;
