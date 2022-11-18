@@ -39,4 +39,4 @@ const App = (props) => {
   )
 }
 
-export default 
+export default App
