@@ -27,7 +27,6 @@ const CityNew = ({ createCity }) => {
               <Label>City</Label>
               <Input
                 type="text"
-                name="City"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
@@ -37,7 +36,6 @@ const CityNew = ({ createCity }) => {
               <Label>Country</Label>
               <Input
                 type="select"
-                name="country"
                 onChange={handleChange}
                 required
               >
@@ -244,7 +242,6 @@ const CityNew = ({ createCity }) => {
               <Label>Notes</Label>
               <Input
                 type="text"
-                name="Notes"
                 placeholder="(Optional)"
                 onChange={handleChange}
               />
