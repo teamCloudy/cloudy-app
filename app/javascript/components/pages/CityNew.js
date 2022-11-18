@@ -27,8 +27,8 @@ const CityNew = ({ createCity }) => {
               <Label for="city">City</Label>
               <Input
                 type="text"
-                name="City"
-                id="City"
+                name="city"
+                id="city"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
@@ -246,8 +246,8 @@ const CityNew = ({ createCity }) => {
               <Label for="Notes">Notes</Label>
               <Input
                 type="text"
-                name="Notes"
-                id="Notes"
+                name="notes"
+                id="notes"
                 placeholder="(Optional)"
                 onChange={handleChange}
               />
