@@ -24,22 +24,20 @@ const CityNew = ({ createCity }) => {
         <div className="form-card">
           <Form>
             <FormGroup>
-              <Label for="city">City</Label>
+              <Label>City</Label>
               <Input
                 type="text"
                 name="City"
-                id="City"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
               />
             </FormGroup>
             <FormGroup>
-              <Label for="country">Country</Label>
+              <Label>Country</Label>
               <Input
                 type="select"
                 name="country"
-                id="country"
                 onChange={handleChange}
                 required
               >
@@ -243,11 +241,10 @@ const CityNew = ({ createCity }) => {
               </Input>
             </FormGroup>
             <FormGroup>
-              <Label for="Notes">Notes</Label>
+              <Label>Notes</Label>
               <Input
                 type="text"
                 name="Notes"
-                id="Notes"
                 placeholder="(Optional)"
                 onChange={handleChange}
               />
