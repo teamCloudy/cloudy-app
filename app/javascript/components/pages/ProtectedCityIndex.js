@@ -2,6 +2,7 @@ import React from "react";
 import {Card, CardBody, CardTitle, CardSubtitle, Button} from "reactstrap"
 
 const ProtectedUserIndex = ({ cities, weathers, logged_in, current_user }) => {
+    console.log(cities)
     return (
 
         <div>
