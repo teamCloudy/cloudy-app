@@ -243,7 +243,7 @@ const CityNew = ({ createCity }) => {
               </Input>
             </FormGroup>
             <FormGroup>
-              <Label for="Notes">Notes</Label>
+              <Label for="notes">Notes</Label>
               <Input
                 type="text"
                 name="notes"
