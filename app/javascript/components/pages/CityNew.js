@@ -1,8 +1,10 @@
 import React, { useState } from "react"
+import { Navigate, useNavigate } from "react-router-dom"
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
 
+
 const CityNew = ({ createCity, current_user }) => {
-  
+  const navigate = useNavigate()
   const [newCity, setNewCity] = useState({
     user_id: current_user.id,
     city_name: "",
@@ -28,6 +30,7 @@ const CityNew = ({ createCity, current_user }) => {
   const handleSubmit = () => {
     console.log("User Submitted Information:", newCity)
     createCity(newCity)
+    navigate("/protectedcityindex")
   }
 
   return (
@@ -36,24 +39,26 @@ const CityNew = ({ createCity, current_user }) => {
         <div className="form-card">
           <Form>
             <FormGroup>
-              <Label for="city">City</Label>
+              <Label for="city_name">City</Label>
               <Input
                 type="text"
-                name="city"
-                id="city"
+                name="city_name"
+                id="city_name"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
+                value={newCity.city_name}
               />
             </FormGroup>
             <FormGroup>
-              <Label for="country">Country</Label>
+              <Label for="country_name">Country</Label>
               <Input
                 type="select"
-                name="country"
-                id="country"
+                name="country_name"
+                id="country_name"
                 onChange={handleChange}
                 required
+                value={newCity.country_name}
               >
                 <option>SELECT COUNTRY</option>
                 <option>Afghanistan</option>
@@ -255,17 +260,19 @@ const CityNew = ({ createCity, current_user }) => {
               </Input>
             </FormGroup>
             <FormGroup>
-              <Label for="Notes">Notes</Label>
+              <Label for="notes">Notes</Label>
               <Input
                 type="text"
-                name="Notes"
-                id="Notes"
+                name="notes"
+                id="notes"
                 placeholder="(Optional)"
                 onChange={handleChange}
+                value={newCity.notes}
               />
+
             </FormGroup>
             <div className="center-flex">
-              <Button onClick={handleSubmit}>Add City</Button>
+              <Button onClick={handleSubmit} name="submit">Add City</Button>
             </div>
           </Form>
         </div>

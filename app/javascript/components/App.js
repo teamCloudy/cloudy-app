@@ -49,16 +49,13 @@ const App = (props) => {
       headers: {
         "Content-Type": "application/json"
       },
-    // HTTP verb so the correct endpoint is invoked on the server
+      
     method: "POST"
   })
-  // encap whatever it returns back
   .then((response) => response.json())
   .then(() => readCity())
   .catch((errors) => console.log(errors))
-  //becomes whats available from payload
-  // .then((payload) => console.log(payload))
-  // .catch((errors) => console.log("City create errors"))
+  
   }
 
   
