@@ -1,13 +1,24 @@
 import React, { useState } from "react"
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
 
-const CityNew = ({ createCity }) => {
-  // I set the default state for the options that I used a drop select for. These can still be updated by the user and submitted correctly, but if the user does NOT change the drop down, it will default to the value that's shown on the page. (This will be the first value in the options.)
+const CityNew = ({ createCity, current_user }) => {
+  
   const [newCity, setNewCity] = useState({
+    user_id: current_user.id,
     city_name: "",
     country_name: "SELECT COUNTRY",
     notes: "",
   })
+
+  // const mockCity = 
+  // {
+  //   user_id: 1,
+  //   weather_id: 1,
+  //   city_name: "San Diego",
+  //   country_name: "United States",
+  //   notes: "Lorem Ipsum",
+  // }
+
 
   const handleChange = (e) => {
     setNewCity({ ...newCity, [e.target.name]: e.target.value })
@@ -16,6 +27,7 @@ const CityNew = ({ createCity }) => {
 
   const handleSubmit = () => {
     console.log("User Submitted Information:", newCity)
+    createCity(newCity)
   }
 
   return (
@@ -27,8 +39,8 @@ const CityNew = ({ createCity }) => {
               <Label for="city">City</Label>
               <Input
                 type="text"
-                name="City"
-                id="City"
+                name="city"
+                id="city"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required

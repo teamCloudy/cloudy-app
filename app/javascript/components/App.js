@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, { useEffect, useState} from "react"
 import mockWeathers from "./mockWeathers"
 import mockUserCities from "./mockUserCities"
 import Footer from "./components/Footer"
@@ -15,9 +15,52 @@ import ProtectedCityShow from "./pages/ProtectedCityShow"
 import ProtectedCityIndex from "./pages/ProtectedCityIndex"
 
 
+
+
 const App = (props) => {
   const [cities, setCities] = useState(mockUserCities);
   const [weathers, setWeathers] = useState(mockWeathers);
+  console.log(props.current_user)
+
+  useEffect(() => {
+    readCities()
+  }, [])
+  
+
+  const readCities = () => {
+    fetch("http://localhost:3000/user_cities")
+    .then((response) => response.json())
+    .then((payload) => {
+      setCities(payload)
+    })
+    .catch((errors) => console.log(errors))
+  }
+
+
+
+
+  const createCity = (newCity) => {
+    fetch("http://localhost:3000/user_cities", {
+
+      // converts the object to a string that can be passed in the request
+      body: JSON.stringify(newCity),
+       // specify the info being sent in JSON and the info returning should be JSON
+       // headers tells rails api what content type is being sent?(sending json)
+      headers: {
+        "Content-Type": "application/json"
+      },
+    // HTTP verb so the correct endpoint is invoked on the server
+    method: "POST"
+  })
+  // encap whatever it returns back
+  .then((response) => response.json())
+  .then(() => readCity())
+  .catch((errors) => console.log(errors))
+  //becomes whats available from payload
+  // .then((payload) => console.log(payload))
+  // .catch((errors) => console.log("City create errors"))
+  }
+
   
 
   return (
@@ -30,7 +73,7 @@ const App = (props) => {
         <Route path="/protectedcityindex" element={<ProtectedCityIndex />} />
         <Route path="/cityshow" element={<CityShow />} />
         <Route path="/protectedcityshow" element={<ProtectedCityShow />} />
-        <Route path="/citynew" element={<CityNew />} />
+        <Route path="/citynew" element={<CityNew createCity={createCity} {...props} />} />
         <Route path="/cityedit" element={<CityEdit />} />
         <Route element={<NotFound />} />
       </Routes>
