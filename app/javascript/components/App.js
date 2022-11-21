@@ -30,7 +30,7 @@ const App = (props) => {
         <Route path="/protectedcityindex" element={<ProtectedCityIndex cities={cities} weathers={weathers} {...props}/>} />
         <Route path="/cityshow" element={<CityShow />} />
         <Route path="/protectedcityshow" element={<ProtectedCityShow />} />
-        <Route path="/citynew" element={<CityNew />} />
+        <Route path="/citynew" element={<CityNew cities={cities} weathers={weathers} {...props} />} />
         <Route path="/cityedit" element={<CityEdit />} />
         <Route element={<NotFound />} />
       </Routes>

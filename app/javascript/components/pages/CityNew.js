@@ -2,10 +2,12 @@ import React, { useState } from "react"
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
 
 const CityNew = ({ createCity }) => {
-  // I set the default state for the options that I used a drop select for. These can still be updated by the user and submitted correctly, but if the user does NOT change the drop down, it will default to the value that's shown on the page. (This will be the first value in the options.)
+  
   const [newCity, setNewCity] = useState({
+    user_id: 1,
+    weather_id: 1,
     city_name: "",
-    country_name: "SELECT COUNTRY",
+    country_name: "",
     notes: "",
   })
 
@@ -16,7 +18,20 @@ const CityNew = ({ createCity }) => {
 
   const handleSubmit = () => {
     console.log("User Submitted Information:", newCity)
-  }
+    fetch("http://localhost:3000/user_cities",{
+      body: JSON.stringify(newCity),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    }) 
+    .then((response) => response.json())
+  //   .then((payload) => {
+
+  //     // setCities(payload)
+
+  // })
+}
 
   return (
     <>
@@ -24,22 +39,22 @@ const CityNew = ({ createCity }) => {
         <div className="form-card">
           <Form>
             <FormGroup>
-              <Label for="city">City</Label>
+              <Label for="city_name">City</Label>
               <Input
                 type="text"
-                name="city"
-                id="city"
+                name="city_name"
+                id="city_name"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
               />
             </FormGroup>
             <FormGroup>
-              <Label for="country">Country</Label>
+              <Label for="country_name">Country</Label>
               <Input
                 type="select"
-                name="country"
-                id="country"
+                name="country_name"
+                id="country_name"
                 onChange={handleChange}
                 required
               >
@@ -253,7 +268,7 @@ const CityNew = ({ createCity }) => {
               />
             </FormGroup>
             <div className="center-flex">
-              <Button onClick={handleSubmit}>Add City</Button>
+              <Button onClick={handleSubmit} name="submit">Add City</Button>
             </div>
           </Form>
         </div>

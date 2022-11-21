@@ -5,7 +5,7 @@ class UserCitiesController < ApplicationController
     end
 
     def create
-        city = UserCity.create(user_city_params)
+        city = UserCity.create!(user_city_params)
         if city.valid?
             render json: city
         else

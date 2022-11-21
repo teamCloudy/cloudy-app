@@ -2,11 +2,11 @@ import React from "react";
 import {Card, CardBody, CardTitle, CardSubtitle, Button} from "reactstrap"
 
 const ProtectedUserIndex = ({ cities, weathers, logged_in, current_user }) => {
-    console.log(cities)
+    console.log(cities ,"LOOK OVER HEREEEEEEEE", weathers)
     return (
 
         <div>
-            <h3 className="centerTitle"> Most Popular Cities</h3>
+            <h3 className="centerTitle"> My Cities</h3>
             {logged_in && (
 
                 <>
