@@ -1,15 +1,19 @@
 import React, { useState } from "react"
+import { Navigate, useNavigate } from "react-router-dom"
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
 
-const CityNew = ({ createCity }) => {
-  
+const CityNew = ({ createCity, current_user }) => {
+  const navigate = useNavigate()
   const [newCity, setNewCity] = useState({
-    user_id: 1,
+    user_id: current_user.id,
     weather_id: 1,
     city_name: "",
     country_name: "",
     notes: "",
-  })
+    // submitted:false
+  },
+  
+  )
 
   const handleChange = (e) => {
     setNewCity({ ...newCity, [e.target.name]: e.target.value })
@@ -17,20 +21,23 @@ const CityNew = ({ createCity }) => {
   }
 
   const handleSubmit = () => {
-    console.log("User Submitted Information:", newCity)
-    fetch("http://localhost:3000/user_cities",{
-      body: JSON.stringify(newCity),
-      headers: {
-        "Content-Type": "application/json"
-      },
-      method: "POST"
-    }) 
-    .then((response) => response.json())
+
+    // console.log("User Submitted Information:", newCity)
+    // fetch("http://localhost:3000/user_cities",{
+    //   body: JSON.stringify(newCity),
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   method: "POST"
+    // }) 
+    // .then((response) => response.json())
   //   .then((payload) => {
 
   //     // setCities(payload)
 
   // })
+  createCity(newCity)
+  navigate("/protectedcityindex")
 }
 
   return (
@@ -47,6 +54,7 @@ const CityNew = ({ createCity }) => {
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
+                value={newCity.city_name}
               />
             </FormGroup>
             <FormGroup>
@@ -57,7 +65,7 @@ const CityNew = ({ createCity }) => {
                 id="country_name"
                 onChange={handleChange}
                 required
-              >
+                value={newCity.country_name}>
                 <option>SELECT COUNTRY</option>
                 <option>Afghanistan</option>
                 <option>Albania</option>
@@ -265,6 +273,7 @@ const CityNew = ({ createCity }) => {
                 id="notes"
                 placeholder="(Optional)"
                 onChange={handleChange}
+                value={newCity.notes}
               />
             </FormGroup>
             <div className="center-flex">

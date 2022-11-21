@@ -19,7 +19,27 @@ const App = (props) => {
   const [cities, setCities] = useState(mockUserCities);
   const [weathers, setWeathers] = useState(mockWeathers);
   
+  const readCities = () => {
+    fetch("http://localhost:3000/user_cities")
+    .then((response) => response.json())
+    .then((payload) => {
+      setCities(payload)
+    })
+    .catch((errors) => console.log(errors))
+  }
 
+  const createCity = (newCity) => {
+    fetch("http://localhost:3000/user_cities", {
+      body: JSON.stringify(newCity),
+      headers: {
+        "Content-Type": "application/json"
+      },
+    method: "POST"
+  })
+  .then((response) => response.json())
+  .then(() => readCity())
+  .catch((errors) => console.log(errors))
+  }
   return (
     <BrowserRouter>
       <Header {...props}/>
@@ -30,7 +50,7 @@ const App = (props) => {
         <Route path="/protectedcityindex" element={<ProtectedCityIndex cities={cities} weathers={weathers} {...props}/>} />
         <Route path="/cityshow" element={<CityShow />} />
         <Route path="/protectedcityshow" element={<ProtectedCityShow />} />
-        <Route path="/citynew" element={<CityNew cities={cities} weathers={weathers} {...props} />} />
+        <Route path="/citynew" element={<CityNew cities={cities} weathers={weathers} createCity={createCity} {...props} />} />
         <Route path="/cityedit" element={<CityEdit />} />
         <Route element={<NotFound />} />
       </Routes>
