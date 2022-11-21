@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
+import { Button, Form, FormGroup, Label, Input } from "reactstrap"
+// import { useNavigate } from "react-router-dom" -for when protected show 
 
 const CityNew = ({ createCity }) => {
-  // I set the default state for the options that I used a drop select for. These can still be updated by the user and submitted correctly, but if the user does NOT change the drop down, it will default to the value that's shown on the page. (This will be the first value in the options.)
+  // const navigate = useNavigate() -for when we have protected show
   const [newCity, setNewCity] = useState({
     city_name: "",
-    country_name: "SELECT COUNTRY",
+    country_name: "",
     notes: "",
   })
 
@@ -15,6 +16,8 @@ const CityNew = ({ createCity }) => {
   }
 
   const handleSubmit = () => {
+    createCity(newCity)
+    // navigate("/protectedcityidex") -for when we have protected show
     console.log("User Submitted Information:", newCity)
   }
 
@@ -24,25 +27,26 @@ const CityNew = ({ createCity }) => {
         <div className="form-card">
           <Form>
             <FormGroup>
-              <Label for="city">City</Label>
+              <Label for="city_name">City</Label>
               <Input
                 type="text"
-                name="city"
-                id="city"
+                name="city_name"
+                id="city_name"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
+                value={newCity.city_name}
               />
             </FormGroup>
             <FormGroup>
-              <Label for="country">Country</Label>
+              <Label for="country_name">Country</Label>
               <Input
                 type="select"
-                name="country"
-                id="country"
+                name="country_name"
+                id="country_name"
                 onChange={handleChange}
                 required
-              >
+                value={newCity.country_name}>
                 <option>SELECT COUNTRY</option>
                 <option>Afghanistan</option>
                 <option>Albania</option>
@@ -250,6 +254,7 @@ const CityNew = ({ createCity }) => {
                 id="notes"
                 placeholder="(Optional)"
                 onChange={handleChange}
+                value={newCity.notes}
               />
             </FormGroup>
             <div className="center-flex">

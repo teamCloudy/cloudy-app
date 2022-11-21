@@ -34,7 +34,7 @@ const Home =  ({new_user_route, sign_in_route, logged_in}) => {
                 <p> ALWAYS BE ON TOP OF THE WEATHER</p>
 
                 <button>
-                    <a href={sign_in_route} classname="nav-link">
+                    <a href={sign_in_route} className="nav-link">
                     Sign In
                     </a>
                 </button>
