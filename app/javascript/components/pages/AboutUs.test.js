@@ -7,7 +7,7 @@ import { Card, Button, Row, CardBody, CardTitle } from "reactstrap"
 
 
 describe("<AboutUs />", () => {
-    it ("renders without crashing", () => {
+    it("renders without crashing", () => {
         const div = document.createElement("div")
         render(<AboutUs />, div)
     })
