@@ -2,9 +2,10 @@ import React, { useState } from "react"
 import { Button, Form, FormGroup, Label, Input } from "reactstrap"
 // import { useNavigate } from "react-router-dom" -for when protected show 
 
-const CityNew = ({ createCity }) => {
+const CityNew = ({ createCity, current_user }) => {
   // const navigate = useNavigate() -for when we have protected show
   const [newCity, setNewCity] = useState({
+    user_id: current_user.id,
     city_name: "",
     country_name: "SELECT COUNTRY",
     notes: "",
