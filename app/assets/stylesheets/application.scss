@@ -46,3 +46,22 @@
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
+/* Cats Card from reactstrap goes here*/
+.card {
+  margin: 3rem 0;
+ 
+ }
+ .cat-name {
+   padding-bottom: 20px;
+ }
+ .cat-index-cards {
+   
+   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /*it adds space  20px between cards*/
+  padding-top: 50px;
+  align-content: "center";
+ 
+ }

@@ -15,6 +15,7 @@ import ProtectedCityShow from "./pages/ProtectedCityShow"
 import ProtectedCityIndex from "./pages/ProtectedCityIndex"
 
 
+
 const App = (props) => {
   const [cities, setCities] = useState(mockUserCities);
   const [weathers, setWeathers] = useState(mockWeathers);

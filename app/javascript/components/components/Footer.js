@@ -1,10 +1,14 @@
-import React from "react";
+import React from "react"
 
-const Footer =  () => {
+const Footer = () => {
     return (
-        <>
-        <h3> Footer</h3>
-        </>
+
+                <footer style={{ width: "100%", paddingBottom: "20px", textAlign: "center", color: "black", paddingTop: "20px", fontFamily: "Arial", fontSize: "1em",  background: "#D6DBDF", height: "50px", margin: "auto"}}>
+                    Copyright &copy; 2022 | CLOUDY<br>
+                    </br>
+                </footer>
+         
+       
     )
 }
 
