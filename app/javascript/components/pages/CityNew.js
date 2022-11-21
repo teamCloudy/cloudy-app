@@ -2,12 +2,11 @@ import React, { useState } from "react"
 import { Button, Form, FormGroup, Label, Input } from "reactstrap"
 // import { useNavigate } from "react-router-dom" -for when protected show 
 
-const CityNew = ({ createCity, current_user }) => {
+const CityNew = ({ createCity, currentUser }) => {
   // const navigate = useNavigate() -for when we have protected show
   const [newCity, setNewCity] = useState({
-    user_id: current_user.id,
     city_name: "",
-    country_name: "SELECT COUNTRY",
+    country_name: "",
     notes: "",
   })
 
@@ -17,6 +16,7 @@ const CityNew = ({ createCity, current_user }) => {
   }
 
   const handleSubmit = () => {
+    createCity(newCity)
     // navigate("/protectedcityidex") -for when we have protected show
     console.log("User Submitted Information:", newCity)
   }
@@ -46,8 +46,7 @@ const CityNew = ({ createCity, current_user }) => {
                 id="country_name"
                 onChange={handleChange}
                 required
-                value={newCity.country_name}
-              >
+                value={newCity.country_name}>
                 <option>SELECT COUNTRY</option>
                 <option>Afghanistan</option>
                 <option>Albania</option>
