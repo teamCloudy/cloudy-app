@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, { useEffect, useState} from "react"
 import mockWeathers from "./mockWeathers"
 import mockUserCities from "./mockUserCities"
 import Footer from "./components/Footer"
@@ -17,13 +17,34 @@ import ProtectedCityIndex from "./pages/ProtectedCityIndex"
 
 
 const App = (props) => {
-  const [cities, setCities] = useState(mockUserCities);
+  const [cities, setCities] = useState([]);
   const [weathers, setWeathers] = useState(mockWeathers);
   
-  const createCity = (city) => {
-    console.log(city)
-  }
+  useEffect(() => {
+    readCities()
+  }, [])
 
+  const readCities = () => {
+    fetch("/user_cities")
+    .then((response) => response.json())
+    .then((payload) => {
+      setCities(payload)
+    })
+    .catch((errors) => console.log(errors))
+  }
+  
+  const createCity = (newCity) => {
+    fetch("/user_cities", {
+      body: JSON.stringify(newCity),
+      headers: {
+        "Content-Type": "application/json"
+      },
+    method: "POST"
+  })
+  .then((response) => response.json())
+  .then(() => readCities())
+  .catch((errors) => console.log(errors))
+  }
   return (
     <BrowserRouter>
       <Header {...props}/>
@@ -34,7 +55,7 @@ const App = (props) => {
         <Route path="/protectedcityindex" element={<ProtectedCityIndex cities={cities} weathers={weathers} {...props}/>} />
         <Route path="/cityshow" element={<CityShow />} />
         <Route path="/protectedcityshow" element={<ProtectedCityShow />} />
-        <Route path="/citynew" element={<CityNew createCity={createCity} {...props} />} />
+        <Route path="/citynew" element={<CityNew cities={cities} weathers={weathers} createCity={createCity} {...props} />} />
         <Route path="/cityedit" element={<CityEdit />} />
         <Route element={<NotFound />} />
       </Routes>

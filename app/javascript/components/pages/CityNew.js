@@ -1,14 +1,19 @@
 import React, { useState } from "react"
-import { Button, Form, FormGroup, Label, Input } from "reactstrap"
-// import { useNavigate } from "react-router-dom" -for when protected show 
+import { Navigate, useNavigate } from "react-router-dom"
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
 
-const CityNew = ({ createCity }) => {
-  // const navigate = useNavigate() -for when we have protected show
+const CityNew = ({ createCity, current_user }) => {
+  const navigate = useNavigate()
   const [newCity, setNewCity] = useState({
+    user_id: current_user.id,
+    weather_id: 1,
     city_name: "",
     country_name: "",
     notes: "",
-  })
+    // submitted:false
+  },
+  
+  )
 
   const handleChange = (e) => {
     setNewCity({ ...newCity, [e.target.name]: e.target.value })
@@ -17,8 +22,7 @@ const CityNew = ({ createCity }) => {
 
   const handleSubmit = () => {
     createCity(newCity)
-    // navigate("/protectedcityidex") -for when we have protected show
-    console.log("User Submitted Information:", newCity)
+    navigate("/protectedcityindex")
   }
 
   return (
@@ -258,7 +262,7 @@ const CityNew = ({ createCity }) => {
               />
             </FormGroup>
             <div className="center-flex">
-              <Button onClick={handleSubmit}>Add City</Button>
+              <Button onClick={handleSubmit} name="submit">Add City</Button>
             </div>
           </Form>
         </div>
