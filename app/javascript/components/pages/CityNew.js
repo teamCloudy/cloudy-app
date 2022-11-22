@@ -21,24 +21,9 @@ const CityNew = ({ createCity, current_user }) => {
   }
 
   const handleSubmit = () => {
-
-    // console.log("User Submitted Information:", newCity)
-    // fetch("http://localhost:3000/user_cities",{
-    //   body: JSON.stringify(newCity),
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   },
-    //   method: "POST"
-    // }) 
-    // .then((response) => response.json())
-  //   .then((payload) => {
-
-  //     // setCities(payload)
-
-  // })
-  createCity(newCity)
-  navigate("/protectedcityindex")
-}
+    createCity(newCity)
+    navigate("/protectedcityindex")
+  }
 
   return (
     <>

@@ -15,6 +15,7 @@ import ProtectedCityShow from "./pages/ProtectedCityShow"
 import ProtectedCityIndex from "./pages/ProtectedCityIndex"
 
 
+
 const App = (props) => {
   const [cities, setCities] = useState([]);
   const [weathers, setWeathers] = useState(mockWeathers);
@@ -23,7 +24,6 @@ const App = (props) => {
     readCities()
   }, [])
 
-  
   const readCities = () => {
     fetch("/user_cities")
     .then((response) => response.json())
@@ -32,6 +32,7 @@ const App = (props) => {
     })
     .catch((errors) => console.log(errors))
   }
+  
   const createCity = (newCity) => {
     fetch("/user_cities", {
       body: JSON.stringify(newCity),
