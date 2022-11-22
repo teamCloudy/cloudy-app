@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, { useEffect, useState} from "react"
 import mockWeathers from "./mockWeathers"
 import mockUserCities from "./mockUserCities"
 import Footer from "./components/Footer"
@@ -19,17 +19,21 @@ const App = (props) => {
   const [cities, setCities] = useState([]);
   const [weathers, setWeathers] = useState(mockWeathers);
   
+  useEffect(() => {
+    readCities()
+  }, [])
+
+  
   const readCities = () => {
-    fetch("http://localhost:3000/user_cities")
+    fetch("/user_cities")
     .then((response) => response.json())
     .then((payload) => {
       setCities(payload)
     })
     .catch((errors) => console.log(errors))
   }
-
   const createCity = (newCity) => {
-    fetch("http://localhost:3000/user_cities", {
+    fetch("/user_cities", {
       body: JSON.stringify(newCity),
       headers: {
         "Content-Type": "application/json"

@@ -2,17 +2,16 @@ import React from "react";
 import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 
 const CityIndex = ({ cities, weathers }) => {
+  console.log("CITYINDEX.js-->", cities)
   return (
     <>
       <div>
         <h3 className="centerTitle"> Most Popular Cities</h3>
         <div className="centerCard">
           {cities?.map((city, index) => {
-            console.log(city);
             let weather = weathers?.filter(
               (weather) => city.weather_id === weather.id
             );
-            console.log(weather);
             return (
               <Card style={{ width: "210px", height: "210px" }} key={index}>
                 <CardBody>
