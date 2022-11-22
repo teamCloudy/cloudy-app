@@ -16,7 +16,7 @@ import ProtectedCityIndex from "./pages/ProtectedCityIndex"
 
 
 const App = (props) => {
-  const [cities, setCities] = useState(mockUserCities);
+  const [cities, setCities] = useState([]);
   const [weathers, setWeathers] = useState(mockWeathers);
   
   const readCities = () => {
@@ -37,7 +37,7 @@ const App = (props) => {
     method: "POST"
   })
   .then((response) => response.json())
-  .then(() => readCity())
+  .then(() => readCities())
   .catch((errors) => console.log(errors))
   }
   return (
