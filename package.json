@@ -31,5 +31,8 @@
     "roots": [
       "app/javascript/components"
     ]
+  },
+  "engines": {
+    "node": "16.18.1"
   }
 }
