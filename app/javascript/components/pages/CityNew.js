@@ -1,29 +1,28 @@
-import React, { useState } from "react"
-import { Navigate, useNavigate } from "react-router-dom"
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
+import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
 
-const CityNew = ({ createCity, current_user }) => {
-  const navigate = useNavigate()
+const CityNew = ({ createCity, weathers, current_user }) => {
+  const navigate = useNavigate();
+  const getWeather = Math.floor(Math.random() * weathers.length);
   const [newCity, setNewCity] = useState({
     user_id: current_user.id,
-    weather_id: 1,
+    weather_id: getWeather,
     city_name: "",
     country_name: "",
     notes: "",
-    // submitted:false
-  },
-  
-  )
+    private: true,
+  });
 
   const handleChange = (e) => {
-    setNewCity({ ...newCity, [e.target.name]: e.target.value })
-    console.log(e.target.name, e.target.value)
-  }
+    setNewCity({ ...newCity, [e.target.name]: e.target.value });
+    console.log(e.target.name, e.target.value);
+  };
 
   const handleSubmit = () => {
-    createCity(newCity)
-    navigate("/protectedcityindex")
-  }
+    createCity(newCity);
+    navigate("/protectedcityindex");
+  };
 
   return (
     <>
@@ -31,11 +30,11 @@ const CityNew = ({ createCity, current_user }) => {
         <div className="form-card">
           <Form>
             <FormGroup>
-              <Label for="city_name">City</Label>
+              <Label for="city-name">City</Label>
               <Input
                 type="text"
                 name="city_name"
-                id="city_name"
+                id="city-name"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
@@ -43,14 +42,15 @@ const CityNew = ({ createCity, current_user }) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="country_name">Country</Label>
+              <Label for="country-name">Country</Label>
               <Input
                 type="select"
                 name="country_name"
-                id="country_name"
+                id="country-name"
                 onChange={handleChange}
                 required
-                value={newCity.country_name}>
+                value={newCity.country_name}
+              >
                 <option>SELECT COUNTRY</option>
                 <option>Afghanistan</option>
                 <option>Albania</option>
@@ -262,13 +262,15 @@ const CityNew = ({ createCity, current_user }) => {
               />
             </FormGroup>
             <div className="center-flex">
-              <Button onClick={handleSubmit} name="submit">Add City</Button>
+              <Button onClick={handleSubmit} name="submit">
+                Add City
+              </Button>
             </div>
           </Form>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default CityNew
+export default CityNew;
