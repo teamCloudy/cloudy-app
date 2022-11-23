@@ -32,7 +32,6 @@ const CityIndex = ({ cities, weathers }) => {
                     </NavLink>
                   </CardBody>
                 </Card>
-                // }
               );
             } else if (city.private === true) {
               return (

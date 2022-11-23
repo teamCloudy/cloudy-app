@@ -24,7 +24,7 @@ const AboutUs = () => {
                         <Col sm="3">
                             <Card
                                 style={{
-                                    width: '18rem'
+                                    maxWidth: '18rem'
                                 }}
                             >
                                 <img
@@ -54,12 +54,13 @@ const AboutUs = () => {
                         <Col sm="3">
                             <Card
                                 style={{
-                                    width: '18rem'
+                                    width: '18rem',
+                                    minHeight: '500px'
                                 }}
                             >
                                 <img
                                     alt="card image cap"
-                                    src="https://images.pexels.com/photos/1521304/pexels-photo-1521304.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                    src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800"
                                     top
                                     width="100%"
                                 />
