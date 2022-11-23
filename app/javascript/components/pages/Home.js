@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ButtonToolbar } from "reactstrap";
 
 const Home =  ({new_user_route, sign_in_route, logged_in}) => {
+    const navigate = useNavigate()
     const handleSubmit = (id) => {
         if (id === "index") {
             navigate("/cityindex")
