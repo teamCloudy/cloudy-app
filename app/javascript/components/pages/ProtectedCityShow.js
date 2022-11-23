@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, NavLink} from "react-router-dom";
 import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 
 const ProtectedCityShow = ({ cities, weathers, current_user }) => {
@@ -65,7 +65,9 @@ const ProtectedCityShow = ({ cities, weathers, current_user }) => {
                     {showCity.notes}
                   </CardSubtitle>
                   <Button>
-                    <a href={`/cityedit/${showCity.id}`}>Edit Notes</a>
+                    <NavLink to={`/cityedit/${showCity.id}`}>
+                      Edit Notes
+                    </NavLink>
                   </Button>
                   <Button onClick={handleClick}>Delete Location</Button>
                 </CardBody>

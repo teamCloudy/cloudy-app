@@ -26,6 +26,7 @@ const App = (props) => {
     readWeathers();
   }, []);
 
+
   const readCities = () => {
     fetch("/user_cities")
       .then((response) => response.json())
@@ -55,6 +56,11 @@ const App = (props) => {
       .then((response) => response.json())
       .then(() => readCities())
       .catch((errors) => console.log(errors));
+  };
+
+  const editNotes = (city, id) => {
+    console.log("city:", city);
+    console.log("id", id);
   };
 
   return (
@@ -91,14 +97,23 @@ const App = (props) => {
           path="/citynew"
           element={
             <CityNew
-              cities={cities}
               weathers={weathers}
               createCity={createCity}
               {...props}
             />
           }
         />
-        <Route path="/cityedit" element={<CityEdit />} />
+        <Route
+          path="/cityedit/:id"
+          element={
+            <CityEdit
+              cities={cities}
+              weathers={weathers}
+              {...props}
+              editNotes={editNotes}
+            />
+          }
+        />
         <Route element={<NotFound />} />
       </Routes>
       <Footer />

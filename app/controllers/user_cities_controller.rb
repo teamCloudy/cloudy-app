@@ -34,6 +34,6 @@ class UserCitiesController < ApplicationController
 
     private
     def user_city_params
-        params.require(:user_city).permit(:user_id, :weather_id, :city_name, :country_name, :notes)
+        params.require(:user_city).permit(:user_id, :weather_id, :city_name, :country_name, :notes, :private)
     end
 end
