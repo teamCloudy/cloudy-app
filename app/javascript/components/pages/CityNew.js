@@ -30,11 +30,11 @@ const CityNew = ({ createCity, weathers, current_user }) => {
         <div className="form-card">
           <Form>
             <FormGroup>
-              <Label for="city_name">City</Label>
+              <Label for="city-name">City</Label>
               <Input
                 type="text"
                 name="city_name"
-                id="city_name"
+                id="city-name"
                 placeholder="Enter City"
                 onChange={handleChange}
                 required
@@ -42,11 +42,11 @@ const CityNew = ({ createCity, weathers, current_user }) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label for="country_name">Country</Label>
+              <Label for="country-name">Country</Label>
               <Input
                 type="select"
                 name="country_name"
-                id="country_name"
+                id="country-name"
                 onChange={handleChange}
                 required
                 value={newCity.country_name}
