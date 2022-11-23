@@ -17,17 +17,17 @@ import ProtectedCityIndex from "./pages/ProtectedCityIndex";
 const App = (props) => {
   const [cities, setCities] = useState([]);
   const [weathers, setWeathers] = useState([
-    {
-      temperature: 0,
-      time: "",
-      date: "",
-      current_weather: "",
-      uv_index: 0,
-      wind_speed: 0,
-      humidity: 0,
-      description: "",
-      icon: "",
-    },
+    // {
+    //   temperature: 0,
+    //   time: "",
+    //   date: "",
+    //   current_weather: "",
+    //   uv_index: 0,
+    //   wind_speed: 0,
+    //   humidity: 0,
+    //   description: "",
+    //   icon: "",
+    // },
   ]);
 
   useEffect(() => {
@@ -68,7 +68,7 @@ const App = (props) => {
       .then(() => readCities())
       .catch((errors) => console.log(errors));
   };
-  console.log("LOOK HERE!!! WEATHER HERE! --> ", weathers);
+
   return (
     <BrowserRouter>
       <Header {...props} />
