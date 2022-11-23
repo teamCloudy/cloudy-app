@@ -1,12 +1,15 @@
 import React, { useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
 import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
+import weather from "../mockWeathers"
 
-const CityNew = ({ createCity, current_user }) => {
+const CityNew = ({ createCity, current_user, weathers }) => {
   const navigate = useNavigate()
+  const getWeather = Math.floor(Math.random() * (weathers.length))
+  console.log("GETWEATHER -->", getWeather)
   const [newCity, setNewCity] = useState({
     user_id: current_user.id,
-    weather_id: 1,
+    weather_id: getWeather,
     city_name: "",
     country_name: "",
     notes: "",

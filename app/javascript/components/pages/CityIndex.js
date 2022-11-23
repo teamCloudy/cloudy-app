@@ -12,6 +12,7 @@ const CityIndex = ({ cities, weathers }) => {
             let weather = weathers?.filter(
               (weather) => city.weather_id === weather.id
             );
+            console.log(weather)
             return (
               <Card style={{ width: "210px", height: "210px" }} key={index}>
                 <CardBody>
