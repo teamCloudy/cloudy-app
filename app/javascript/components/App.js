@@ -26,7 +26,6 @@ const App = (props) => {
     readWeathers();
   }, []);
 
-
   const readCities = () => {
     fetch("/user_cities")
       .then((response) => response.json())
@@ -58,9 +57,17 @@ const App = (props) => {
       .catch((errors) => console.log(errors));
   };
 
-  const editNotes = (city, id) => {
-    console.log("city:", city);
-    console.log("id", id);
+  const editNotes = (updateNotes, id) => {
+    fetch(`/user_cities/${id}`, {
+      body: JSON.stringify(updateNotes),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then(() => readCities())
+      .catch((errors) => console.log(errors));
   };
 
   return (
@@ -96,11 +103,7 @@ const App = (props) => {
         <Route
           path="/citynew"
           element={
-            <CityNew
-              weathers={weathers}
-              createCity={createCity}
-              {...props}
-            />
+            <CityNew weathers={weathers} createCity={createCity} {...props} />
           }
         />
         <Route
