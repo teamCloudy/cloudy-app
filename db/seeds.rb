@@ -12,7 +12,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../day.svg",
   },
   {
     temperature: 44,
@@ -23,7 +23,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../cloudy.svg",
   },
   {
     temperature: 60,
@@ -34,7 +34,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../day.svg",
   },
   {
     temperature: 37,
@@ -45,7 +45,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../day.svg",
   },
   {
     temperature: 90,
@@ -56,7 +56,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../rainy-3.svg",
   },
   {
     temperature: 80,
@@ -67,7 +67,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../thunder.svg",
   },
   {
     temperature: 101,
@@ -78,7 +78,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../snowy-1.svg",
   },
   {
     temperature: 65,
@@ -89,7 +89,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../assets/images/cloudy.svg",
   },
   {
     temperature: 43,
@@ -100,7 +100,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../night.svg",
   },
   {
     temperature: 99,
@@ -111,7 +111,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 28,
     description: "lorem ipsum",
-    icon: "url",
+    icon: "../thunder.svg",
   }
 ]
 

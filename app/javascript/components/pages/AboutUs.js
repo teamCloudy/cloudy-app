@@ -1,40 +1,32 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
-import { Card, CardBody, CardTitle, CardSubtitle, Button, Row, Col } from "reactstrap"
+import { Card, CardBody, CardTitle, CardSubtitle, Button, Row, Col } from "reactstrap";
+import kyle3 from "../../../assets/images/kyle3.jpg";
+import olena from "../../../assets/images/olena.jpg";
+import joseph from "../../../assets/images/joseph.jpg";
+import athian from "../../../assets/images/athian.jpg";
 
 const AboutUs = () => {
 
     return (
-
         <>
-            <div class="p-5 text-center bg-image" style={{ backgroundImage: `url("https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=800")`, backgroundSize: "cover", height: "1200px", backgroundRepeat: "no-repeat" }}>
-                <h1
-                    style={{
-                        textAlign: "center",
-                        paddingTop: "50px",
-                        color: "white"
-                    }}
-                >
+            <div class="p-5 text-center bg-image meet-team-bg">
+                <h1 className="meet-the-team">
                     Meet the Team
                 </h1>
 
-                <main className="cat-index-cards">
+                <main className="about-index-cards">
 
                     <Row>
                         <Col sm="3">
-                            <Card
-                                style={{
-                                    maxWidth: '18rem'
-                                }}
-                            >
-                                <img
+                            <Card className="card-about">
+                                <img 
                                     alt="card image cap"
-                                    src="https://images.pexels.com/photos/1521304/pexels-photo-1521304.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                    top="true"
+                                    src={kyle3}
+                                    top
                                     width="100%"
                                 />
                                 <CardBody>
-                                    <CardTitle className="cat-name" tag="h5">
+                                    <CardTitle className="about-name" tag="h5">
                                         Kyle Le
                                     </CardTitle>
                                     <CardSubtitle
@@ -52,20 +44,15 @@ const AboutUs = () => {
                         </Col>
 
                         <Col sm="3">
-                            <Card
-                                style={{
-                                    width: '18rem',
-                                    minHeight: '500px'
-                                }}
-                            >
+                            <Card className="card-about">
                                 <img
                                     alt="card image cap"
-                                    src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                    src={athian}
                                     top
                                     width="100%"
                                 />
                                 <CardBody>
-                                    <CardTitle className="cat-name" tag="h5">
+                                    <CardTitle className="about-name" tag="h5">
                                         Athian Camberos
                                     </CardTitle>
                                     <CardSubtitle
@@ -83,19 +70,15 @@ const AboutUs = () => {
                         </Col>
 
                         <Col sm="3">
-                            <Card
-                                style={{
-                                    width: '18rem'
-                                }}
-                            >
+                            <Card className="card-about">
                                 <img
                                     alt="card image cap"
-                                    src="https://images.pexels.com/photos/1521304/pexels-photo-1521304.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                    src={joseph}
                                     top
                                     width="100%"
                                 />
                                 <CardBody>
-                                    <CardTitle className="cat-name" tag="h5">
+                                    <CardTitle className="about-name" tag="h5">
                                         Joseph Han
                                     </CardTitle>
                                     <CardSubtitle
@@ -113,26 +96,22 @@ const AboutUs = () => {
                         </Col>
 
                         <Col sm="3">
-                            <Card
-                                style={{
-                                    width: '18rem'
-                                }}
-                            >
+                            <Card className="card-about">
                                 <img
                                     alt="card image cap"
-                                    src="https://images.pexels.com/photos/1521304/pexels-photo-1521304.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                    src={olena}
                                     top
                                     width="100%"
                                 />
                                 <CardBody>
-                                    <CardTitle className="cat-name" tag="h5">
+                                    <CardTitle className="about-name" tag="h5">
                                         Olena Zheliabina
                                     </CardTitle>
                                     <CardSubtitle
                                         className="mb-2 text-muted"
                                         tag="h6"
                                     >
-                                        Product Manager
+                                        Design Lead
                                     </CardSubtitle>
 
                                     <Button href="https://www.linkedin.com/in/olena-zheliabina" target="_blank">

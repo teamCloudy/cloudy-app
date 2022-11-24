@@ -15,17 +15,21 @@ const CityIndex = ({ cities, weathers }) => {
 
             if (city.private === false) {
               return (
-                <Card style={{ width: "210px", height: "210px" }} key={index}>
+                <Card style={{ width: "210px", height: "400px" }} key={index}>
                   <CardBody>
                     <CardTitle key={index}>{city.city_name}</CardTitle>
                     <CardSubtitle>
                       {city.country_name}
                       <br />
+                      <img src={weather[0]?.icon} />
+                    {console.log("WEATHER", weather[0]?.icon)}
                       {weather[0]?.temperature}
                       <br />
                       {weather[0]?.time}
                       <br />
                       {weather[0]?.date}
+                      <br />
+                      
                     </CardSubtitle>
                     <NavLink to={`/cityshow/${city.id}`} className="nav-link">
                       <Button> See More Details</Button>
