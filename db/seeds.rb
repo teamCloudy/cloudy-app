@@ -27,7 +27,7 @@ weathers_seeds = [
   },
   {
     temperature: 60,
-    time: "07:09",
+    time: "07:00",
     date: "2022-08-13",
     current_weather: "Windy",
     uv_index: 5,
@@ -38,7 +38,7 @@ weathers_seeds = [
   },
   {
     temperature: 37,
-    time: "04:59",
+    time: "04:00",
     date: "2022-08-13",
     current_weather: "Tornado",
     uv_index: 5,
@@ -49,7 +49,7 @@ weathers_seeds = [
   },
   {
     temperature: 90,
-    time: "08:09",
+    time: "08:00",
     date: "2022-08-13",
     current_weather: "Volcano Eruption",
     uv_index: 5,
@@ -60,7 +60,7 @@ weathers_seeds = [
   },
   {
     temperature: 80,
-    time: "01:09",
+    time: "01:00",
     date: "2022-08-13",
     current_weather: "Earthquake",
     uv_index: 5,
@@ -71,7 +71,7 @@ weathers_seeds = [
   },
   {
     temperature: 101,
-    time: "07:56",
+    time: "07:00",
     date: "2022-08-13",
     current_weather: "Hailing",
     uv_index: 5,
@@ -82,7 +82,7 @@ weathers_seeds = [
   },
   {
     temperature: 65,
-    time: "05:09",
+    time: "05:00",
     date: "2022-08-13",
     current_weather: "Normal",
     uv_index: 5,
@@ -93,7 +93,7 @@ weathers_seeds = [
   },
   {
     temperature: 43,
-    time: "07:09",
+    time: "07:00",
     date: "2022-08-13",
     current_weather: "Storm",
     uv_index: 5,
@@ -104,7 +104,7 @@ weathers_seeds = [
   },
   {
     temperature: 99,
-    time: "11:09",
+    time: "11:00",
     date: "2022-08-13",
     current_weather: "Wild Fire",
     uv_index: 5,

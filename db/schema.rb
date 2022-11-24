@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_22_213651) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_24_002133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,7 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_213651) do
 
   create_table "weathers", force: :cascade do |t|
     t.integer "temperature"
-    t.time "time"
+    t.string "time"
     t.date "date"
     t.string "current_weather"
     t.integer "uv_index"

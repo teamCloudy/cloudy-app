@@ -7,7 +7,7 @@ const AboutUs = () => {
     return (
 
         <>
-            <div class="p-5 text-center bg-image" style={{ backgroundImage: `url("https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=800")`, backgroundSize: "cover", height: "1200px", backgroundRepeat: "no-repeat" }}>
+            <div className="p-5 text-center bg-image" style={{ backgroundImage: `url("https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=800")`, backgroundSize: "cover", height: "1200px", backgroundRepeat: "no-repeat" }}>
                 <h1
                     style={{
                         textAlign: "center",
