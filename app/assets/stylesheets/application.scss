@@ -1,5 +1,28 @@
 @import "bootstrap";
 
+/* Navigation */@at-root
+.logo {
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  width: 150px;
+}
+
+.navigation {
+  display: flex;
+  align-items: baseline;
+
+    padding-bottom: 20px;
+    padding-right: 40px;
+    padding-top: 30px;
+    font-weight: 450;
+}
+
+.sign-in-up {
+margin-right: 10px;
+margin-left: 20px;
+}
+
 .card {
   margin: 0.5rem 0.5rem;
 }
@@ -47,24 +70,7 @@
   }
 }
 
-/* Cats Card from reactstrap goes here*/
-.card {
-  margin: 3rem 0;
- 
- }
- .cat-name {
-   padding-bottom: 20px;
- }
- .cat-index-cards {
-   
-   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px; /*it adds space  20px between cards*/
-  padding-top: 50px;
-  align-content: "center";
- 
- }
+
 
  /*Devise Styling*/
 
@@ -105,13 +111,60 @@
 
 .background-image {
   background: image-url('signupbg2');
-  background-size: "cover"; 
-  height: "1200px"; 
-  background-repeat: "no-repeat";
+  background-size: cover; 
+  height: 1100px; 
+  background-repeat: no-repeat;
 }
 
 .log-in {
   text-align: center;
   padding: 20px 0 0;
   margin-bottom: 30px;
+}
+
+
+/* AboutUs | reactstrap */
+
+.card {
+  margin: 3rem 0;
+ 
+ }
+ .about-name {
+   padding-bottom: 20px;
+ }
+ .about-index-cards {
+   
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /*it adds space  20px between cards*/
+  padding-top: 50px;
+  align-content: "center";
+ 
+ }
+
+.card-about {
+  width: 18rem;
+  min-height: 500px;
+}
+
+ 
+
+
+.meet-team-bg {
+background: url("https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=800");
+background-size: cover; 
+height: 1200px;
+background-repeat: no-repeat;
+}
+
+.meet-the-team {
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+.profiles {
+  height: 200px;
+  width: 100%;
+  
 }

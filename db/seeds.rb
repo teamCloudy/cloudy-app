@@ -12,7 +12,7 @@ weathers_seeds = [
     wind_speed: 9,
     humidity: 0,
     description: "Normal tempearatures, and clear skies",
-    icon: "url",
+    icon: "../day.svg",
   },
   {
     temperature: 39,
@@ -23,7 +23,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 13,
     description: "Light snow, with partial sun",
-    icon: "url",
+    icon: "../cloudy.svg",
   },
   {
     temperature: 60,
@@ -34,7 +34,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 3,
     description: "Strong winds with low humidity",
-    icon: "url",
+    icon: "../day.svg",
   },
   {
     temperature: 37,
@@ -45,7 +45,7 @@ weathers_seeds = [
     wind_speed: 35,
     humidity: 28,
     description: "Tornado warning in this area until 3:30pm. Take shelter now. Check local media -NWS.",
-    icon: "url",
+    icon: "../day.svg",
   },
   {
     temperature: 77,
@@ -56,7 +56,7 @@ weathers_seeds = [
     wind_speed: 9,
     humidity: 13,
     description: "Low chances of rain",
-    icon: "url",
+    icon: "../rainy-3.svg",
   },
   {
     temperature: 80,
@@ -78,7 +78,7 @@ weathers_seeds = [
     wind_speed: 18,
     humidity: 13,
     description: "Low chances of rain with strong winds",
-    icon: "url",
+    icon: "../thunder.svg",
   },
   {
     temperature: 40,
@@ -89,7 +89,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 11,
     description: "Light hail",
-    icon: "url",
+    icon: "../snowy-1.svg",
   },
   {
     temperature: 65,
@@ -100,7 +100,7 @@ weathers_seeds = [
     wind_speed: 4,
     humidity: 10,
     description: "Low winds, and cool temperatures with partial sun",
-    icon: "url",
+    icon: "../assets/images/cloudy.svg",
   },
   {
     temperature: 43,
@@ -111,7 +111,7 @@ weathers_seeds = [
     wind_speed: 14,
     humidity: 38,
     description: "Light rain, and mild thunder",
-    icon: "url",
+    icon: "../night.svg",
   },
   {
     temperature: 64,
@@ -166,7 +166,7 @@ weathers_seeds = [
     wind_speed: 7,
     humidity: 0,
     description: "High tempteratures, and Clear skies",
-    icon: "url",
+    icon: "../thunder.svg",
   }
 ]
 
@@ -178,23 +178,23 @@ end
 user_cities_seeds = [
     {
         weather_id: 1,
-        city_name: "Mexico",
-        country_name: "sad",
-        notes: "notes",
+        city_name: "New York City",
+        country_name: "United States",
+        notes: "Big Apple",
         private: false
       },
       {
         weather_id: 2,
-        city_name: "San Diego",
-        country_name: "sad",
-        notes: "notes",
+        city_name: "Paris",
+        country_name: "France",
+        notes: "Eiffel Tower",
         private: false
       },
       {
         weather_id: 3,
-        city_name: "Bikini Bottom",
-        country_name: "sad",
-        notes: "notes",
+        city_name: "Los Angelos",
+        country_name: "United States",
+        notes: "Hollywood",
         private: false
     }
 ]
