@@ -24,6 +24,7 @@ https://team-cloudy-app.herokuapp.com/
 * Jest
 * Webpack
 * Babel
+* Devise
 * Heroku
 
 # Contributors 
