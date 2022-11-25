@@ -6,7 +6,7 @@ const CityIndex = ({ cities, weathers }) => {
   return (
     <>
       <div>
-        <h3 className="centerTitle"> Most Popular Cities</h3>
+        <h3 className="centerTitle">Popular Cities</h3>
         <div className="centerCard">
           {cities?.map((city, index) => {
             let weather = weathers?.filter(
@@ -37,21 +37,21 @@ const CityIndex = ({ cities, weathers }) => {
                   </CardBody>
                 </Card>
               );
-            } else if (city.private === true) {
-              return (
-                <Card style={{ width: "210px", height: "210px" }} key={index}>
-                  <CardBody>
-                    <CardTitle key={index}>{city.city_name}</CardTitle>
-                    <CardSubtitle>
-                      {city.country_name}
-                      <br />
-                    </CardSubtitle>
-                    <NavLink to={`/cityshow/${city.id}`} className="nav-link">
-                      <Button> See More Details</Button>
-                    </NavLink>
-                  </CardBody>
-                </Card>
-              );
+              // } else if (city.private === true) {
+              //   return (
+              //     <Card style={{ width: "210px", height: "210px" }} key={index}>
+              //       <CardBody>
+              //         <CardTitle key={index}>{city.city_name}</CardTitle>
+              //         <CardSubtitle>
+              //           {city.country_name}
+              //           <br />
+              //         </CardSubtitle>
+              //         <NavLink to={`/cityshow/${city.id}`} className="nav-link">
+              //           <Button> See More Details</Button>
+              //         </NavLink>
+              //       </CardBody>
+              //     </Card>
+              //   );
             }
           })}
         </div>

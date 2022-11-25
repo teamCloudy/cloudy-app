@@ -123,23 +123,23 @@ end
 user_cities_seeds = [
     {
         weather_id: 1,
-        city_name: "Mexico",
-        country_name: "sad",
-        notes: "notes",
+        city_name: "New York City",
+        country_name: "United States",
+        notes: "Big Apple",
         private: false
       },
       {
         weather_id: 2,
-        city_name: "San Diego",
-        country_name: "sad",
-        notes: "notes",
+        city_name: "Paris",
+        country_name: "France",
+        notes: "Eiffel Tower",
         private: false
       },
       {
         weather_id: 3,
-        city_name: "Bikini Bottom",
-        country_name: "sad",
-        notes: "notes",
+        city_name: "Los Angelos",
+        country_name: "United States",
+        notes: "Hollywood",
         private: false
     }
 ]

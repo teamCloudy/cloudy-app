@@ -70,6 +70,18 @@ const App = (props) => {
       .catch((errors) => console.log(errors));
   };
 
+  const deleteCity = (id) => {
+    fetch(`/user_cities/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((payload) => readCities())
+      .catch((errors) => console.log("delete errors:", errors));
+  };
+
   return (
     <BrowserRouter>
       <Header {...props} />
@@ -87,6 +99,7 @@ const App = (props) => {
               cities={cities}
               weathers={weathers}
               {...props}
+              deleteCity={deleteCity}
             />
           }
         />
@@ -97,7 +110,12 @@ const App = (props) => {
         <Route
           path="/protectedcityshow/:id"
           element={
-            <ProtectedCityShow cities={cities} weathers={weathers} {...props} />
+            <ProtectedCityShow
+              cities={cities}
+              weathers={weathers}
+              {...props}
+              deleteCity={deleteCity}
+            />
           }
         />
         <Route
@@ -117,7 +135,7 @@ const App = (props) => {
             />
           }
         />
-        <Route element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
