@@ -1,8 +1,9 @@
 import React from "react";
-import { useParams, useNavigate, NavLink} from "react-router-dom";
+import { useParams, useNavigate, NavLink } from "react-router-dom";
 import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 
-const ProtectedCityShow = ({ cities, weathers, current_user }) => {
+const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
+  const navigate = useNavigate();
   const { id } = useParams();
   let weather = weathers;
   const showCity = cities?.find((city) => city.id === +id);
@@ -10,7 +11,7 @@ const ProtectedCityShow = ({ cities, weathers, current_user }) => {
   const handleClick = () => {
     if (current_user.id !== showCity.user_id) {
       alert(
-        "YOu cannot delete another Cloudy user's location that doesn't belong to you!"
+        "You cannot delete another Cloudy user's location that doesn't belong to you!"
       );
     } else if (current_user.id === showCity.user_id) {
       const confirmDelete = confirm(
@@ -18,6 +19,7 @@ const ProtectedCityShow = ({ cities, weathers, current_user }) => {
       );
       if (confirmDelete) {
         deleteCity(showCity.id);
+        navigate("/protectedcityindex");
       } else if (!confirmDelete) {
         console.log("Delete cancelled.");
       }
@@ -70,6 +72,9 @@ const ProtectedCityShow = ({ cities, weathers, current_user }) => {
                     </NavLink>
                   </Button>
                   <Button onClick={handleClick}>Delete Location</Button>
+                  <NavLink to="/cityindex" className="nav-link">
+                    <Button>Back Home</Button>
+                  </NavLink>
                 </CardBody>
               </Card>
             </div>
