@@ -25,7 +25,7 @@ weathers_seeds = [
     wind_speed: 14,
     humidity: 64,
     description: "Overcast with very low chance of rain",
-    icon: "../day.svg",
+    icon: "../cloudy-night-3.svg",
   },
   # TOKYO
   {
@@ -37,7 +37,7 @@ weathers_seeds = [
     wind_speed: 9,
     humidity: 50,
     description: "Partly cloudy with periodically clear skies",
-    icon: "../day.svg",
+    icon: "../cloudy-night-1.svg",
   },
   # CHICAGO
   {
@@ -49,7 +49,7 @@ weathers_seeds = [
     wind_speed: 9,
     humidity: 66,
     description: "Normal temperatures, and clear skies",
-    icon: "../day.svg",
+    icon: "../cloudy-day-1.svg",
   },
   # PARIS
   {
@@ -61,7 +61,7 @@ weathers_seeds = [
     wind_speed: 5,
     humidity: 87,
     description: "Patchy light drizzle",
-    icon: "../day.svg",
+    icon: "../cloudy-day-3.svg",
   },
   # HONG KONG
   {
@@ -73,7 +73,7 @@ weathers_seeds = [
     wind_speed: 15,
     humidity: 91,
     description: "Mostly warm conditions with high humidity",
-    icon: "../day.svg",
+    icon: "../rainy-3.svg",
   },
   # LOS ANGELES
   {
@@ -85,7 +85,7 @@ weathers_seeds = [
     wind_speed: 5,
     humidity: 74,
     description: "Rolling clouds with normal scattered conditions",
-    icon: "../day.svg",
+    icon: "../cloudy-day-1.svg",
   },
   # DUBAI
   {
@@ -97,7 +97,7 @@ weathers_seeds = [
     wind_speed: 9,
     humidity: 56,
     description: "Warm temperatures and clear skies",
-    icon: "../day.svg",
+    icon: "../night.svg",
   },
   # LONDON
   {
@@ -109,7 +109,7 @@ weathers_seeds = [
     wind_speed: 3,
     humidity: 74,
     description: "Cold temperatures with chance of rolling showers",
-    icon: "../day.svg",
+    icon: "../cloudy-day-3.svg",
   },
   {
     temperature: 78,
@@ -131,7 +131,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 13,
     description: "Light snow, with partial sun",
-    icon: "../cloudy.svg",
+    icon: "../snowy-3.svg",
   },
   {
     temperature: 60,
@@ -142,7 +142,7 @@ weathers_seeds = [
     wind_speed: 12,
     humidity: 3,
     description: "Strong winds with low humidity",
-    icon: "../day.svg",
+    icon: "../cloudy-day-3.svg",
   },
   {
     temperature: 37,
@@ -153,7 +153,7 @@ weathers_seeds = [
     wind_speed: 35,
     humidity: 28,
     description: "Tornado warning in this area until 3:30pm. Take shelter now. Check local media -NWS.",
-    icon: "../day.svg",
+    icon: "../thunder.svg",
   },
   {
     temperature: 77,
@@ -171,11 +171,11 @@ weathers_seeds = [
     time: "1:00AM",
     date: "2022-11-28",
     current_weather: "Earthquake",
-    uv_index: 3,
+    uv_index: 0,
     wind_speed: 12,
     humidity: 0,
     description: "EMS magnitude 2.5",
-    icon: "url",
+    icon: "../night.svg",
   },
   {
     temperature: 77,
@@ -186,18 +186,18 @@ weathers_seeds = [
     wind_speed: 18,
     humidity: 13,
     description: "Low chances of rain with strong winds",
-    icon: "../thunder.svg",
+    icon: "../rainy-2.svg",
   },
   {
     temperature: 40,
     time: "10:00AM",
     date: "2022-11-28",
     current_weather: "Hailing",
-    uv_index: 5,
+    uv_index: 0,
     wind_speed: 12,
     humidity: 11,
     description: "Light hail",
-    icon: "../snowy-1.svg",
+    icon: "../snowy-3.svg",
   },
   {
     temperature: 65,
@@ -208,18 +208,18 @@ weathers_seeds = [
     wind_speed: 4,
     humidity: 10,
     description: "Low winds, and cool temperatures with partial sun",
-    icon: "../assets/images/cloudy.svg",
+    icon: "cloudy-day-1.svg",
   },
   {
     temperature: 43,
     time: "3:00AM",
     date: "2022-11-28",
-    current_weather: "Stormy",
+    current_weather: "Thunderstorm",
     uv_index: 0,
     wind_speed: 14,
-    humidity: 38,
-    description: "Light rain, and mild thunder",
-    icon: "../night.svg",
+    humidity: 73,
+    description: "Heavy rain, and mild thunder",
+    icon: "../thunder.svg",
   },
   {
     temperature: 64,
@@ -228,9 +228,9 @@ weathers_seeds = [
     current_weather: "Rainy",
     uv_index: 0,
     wind_speed: 10,
-    humidity: 33,
+    humidity: 68,
     description: "Light rain, with slight chance of sleet",
-    icon: "url",
+    icon: "../rainy-2.svg",
   },
   {
     temperature: 110,
@@ -241,18 +241,18 @@ weathers_seeds = [
     wind_speed: 14,
     humidity: 38,
     description: "Excessive heat warning issued until 8pm",
-    icon: "url",
+    icon: "../day.svg",
   },
   {
     temperature: 46,
     time: "4:00AM",
     date: "2022-11-28",
-    current_weather: "Hailing",
-    uv_index: 2,
-    wind_speed: 80,
+    current_weather: "Blizzard",
+    uv_index: 0,
+    wind_speed: 31,
     humidity: 11,
-    description: "Damaging wind, and high hail",
-    icon: "url",
+    description: "Very windy, heavy snow",
+    icon: "../snowy-5",
   },
   {
     temperature: 76,
@@ -261,20 +261,20 @@ weathers_seeds = [
     current_weather: "Sunny",
     uv_index: 2,
     wind_speed: 9,
-    humidity: 0,
+    humidity: 32,
     description: "Normal temperatures, clear skies, and a low pollen index",
-    icon: "url",
+    icon: "../day.svg",
   },
   {
     temperature: 90,
     time: "1:00AM",
     date: "2022-11-28",
-    current_weather: "Sunny",
-    uv_index: 3,
+    current_weather: "Clear Sky",
+    uv_index: 1,
     wind_speed: 7,
-    humidity: 0,
+    humidity: 13,
     description: "High temperatures, and clear skies",
-    icon: "../thunder.svg",
+    icon: "../night.svg",
   }
 ]
 
