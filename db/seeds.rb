@@ -16,7 +16,7 @@ weathers_seeds = [
   },
   {
     temperature: 39,
-    time: "1:00PM",
+    time: "1:00AM",
     date: "2022-11-28",
     current_weather: "Snowing",
     uv_index: 0,
@@ -27,7 +27,7 @@ weathers_seeds = [
   },
   {
     temperature: 60,
-    time: "7:00PM",
+    time: "7:00AM",
     date: "2022-11-28",
     current_weather: "Windy",
     uv_index: 1,
@@ -38,7 +38,7 @@ weathers_seeds = [
   },
   {
     temperature: 37,
-    time: "4:00PM",
+    time: "4:00AM",
     date: "2022-11-28",
     current_weather: "Tornado",
     uv_index: 0,
@@ -71,7 +71,7 @@ weathers_seeds = [
   },
   {
     temperature: 77,
-    time: "8:00PM",
+    time: "8:00AM",
     date: "2022-11-28",
     current_weather: "Partly Cloudy",
     uv_index: 1,
@@ -104,7 +104,7 @@ weathers_seeds = [
   },
   {
     temperature: 43,
-    time: "3:00PM",
+    time: "3:00AM",
     date: "2022-11-28",
     current_weather: "Stormy",
     uv_index: 0,
@@ -115,7 +115,7 @@ weathers_seeds = [
   },
   {
     temperature: 64,
-    time: "12:00PM",
+    time: "12:00AM",
     date: "2022-11-28",
     current_weather: "Rainy",
     uv_index: 0,
@@ -137,7 +137,7 @@ weathers_seeds = [
   },
   {
     temperature: 46,
-    time: "4:00PM",
+    time: "4:00AM",
     date: "2022-11-28",
     current_weather: "Hailing",
     uv_index: 2,
@@ -159,7 +159,7 @@ weathers_seeds = [
   },
   {
     temperature: 90,
-    time: "1:00PM",
+    time: "1:00AM",
     date: "2022-11-28",
     current_weather: "Sunny",
     uv_index: 3,
