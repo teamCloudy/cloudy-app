@@ -11,9 +11,11 @@ const Navigation = ({
 }) => {
   return (
     <nav
-      className="navbar navbar-expand-lg d-flex "
+      className="navbar navbar-expand-lg"
       style={{ backgroundColor: "#000000", marginBottom: "0" }}
+
     >
+      <div className="container-fluid">
       <a className="navbar-brand text-white" href="/">
         <img className="logo"
           src={logo}
@@ -89,6 +91,7 @@ const Navigation = ({
             </>
           )}
         </ul>
+      </div>
       </div>
     </nav>
   );
