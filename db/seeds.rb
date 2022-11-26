@@ -3,6 +3,114 @@ user = User.where(email: "test@example.com").first_or_create(password: "password
 # weather = Weather.create(temperature: 99, time: "00:00", date: "2022-11-15", current_weather: "Sunny", uv_index: 5, wind_speed: 6, humidity: 50, description: "lorem ipsum", icon: "url")
 
 weathers_seeds = [
+  # NEW YORK CITY
+  {
+    temperature: 52,
+    time: "10:00AM",
+    date: "2022-11-28",
+    current_weather: "Sunny",
+    uv_index: 1,
+    wind_speed: 11,
+    humidity: 57,
+    description: "Partly Cloudy",
+    icon: "../day.svg",
+  },
+  # SYDNEY
+  {
+    temperature: 68,
+    time: "2:00AM",
+    date: "2022-11-28",
+    current_weather: "Cloudy",
+    uv_index: 2,
+    wind_speed: 14,
+    humidity: 64,
+    description: "Overcast with very low chance of rain",
+    icon: "../day.svg",
+  },
+  # TOKYO
+  {
+    temperature: 59,
+    time: "12:00AM",
+    date: "2022-11-28",
+    current_weather: "Partly Cloudy",
+    uv_index: 3,
+    wind_speed: 9,
+    humidity: 50,
+    description: "Partly cloudy with periodically clear skies",
+    icon: "../day.svg",
+  },
+  # CHICAGO
+  {
+    temperature: 78,
+    time: "9:00AM",
+    date: "2022-11-28",
+    current_weather: "Partly Cloudy",
+    uv_index: 2,
+    wind_speed: 9,
+    humidity: 66,
+    description: "Normal temperatures, and clear skies",
+    icon: "../day.svg",
+  },
+  # PARIS
+  {
+    temperature: 52,
+    time: "4:00PM",
+    date: "2022-11-28",
+    current_weather: "Scattered Showers",
+    uv_index: 0,
+    wind_speed: 5,
+    humidity: 87,
+    description: "Patchy light drizzle",
+    icon: "../day.svg",
+  },
+  # HONG KONG
+  {
+    temperature: 78,
+    time: "11:00PM",
+    date: "2022-11-28",
+    current_weather: "Scattered Thunderstorms",
+    uv_index: 1,
+    wind_speed: 15,
+    humidity: 91,
+    description: "Mostly warm conditions with high humidity",
+    icon: "../day.svg",
+  },
+  # LOS ANGELES
+  {
+    temperature: 78,
+    time: "7:00AM",
+    date: "2022-11-28",
+    current_weather: "Partly Cloudy",
+    uv_index: 1,
+    wind_speed: 5,
+    humidity: 74,
+    description: "Rolling clouds with normal scattered conditions",
+    icon: "../day.svg",
+  },
+  # DUBAI
+  {
+    temperature: 82,
+    time: "7:00PM",
+    date: "2022-11-28",
+    current_weather: "Clear",
+    uv_index: 5,
+    wind_speed: 9,
+    humidity: 56,
+    description: "Warm temperatures and clear skies",
+    icon: "../day.svg",
+  },
+  # LONDON
+  {
+    temperature: 78,
+    time: "3:00PM",
+    date: "2022-11-28",
+    current_weather: "Overcast",
+    uv_index: 1,
+    wind_speed: 3,
+    humidity: 74,
+    description: "Cold temperatures with chance of rolling showers",
+    icon: "../day.svg",
+  },
   {
     temperature: 78,
     time: "7:00AM",
@@ -176,27 +284,69 @@ weathers_seeds.each do |weather|
 end
 
 user_cities_seeds = [
-    {
-        weather_id: 1,
-        city_name: "New York City",
-        country_name: "United States",
-        notes: "Big Apple",
-        private: false
-      },
-      {
-        weather_id: 2,
-        city_name: "Paris",
-        country_name: "France",
-        notes: "Eiffel Tower",
-        private: false
-      },
-      {
-        weather_id: 3,
-        city_name: "Los Angelos",
-        country_name: "United States",
-        notes: "Hollywood",
-        private: false
-    }
+  {
+    weather_id: 1,
+    city_name: "New York City",
+    country_name: "United States",
+    notes: "",
+    private: false
+  },
+  {
+    weather_id: 2,
+    city_name: "Sidney",
+    country_name: "Australia",
+    notes: "",
+    private: false
+  },
+  {
+    weather_id: 3,
+    city_name: "Tokyo",
+    country_name: "Japan",
+    notes: "",
+    private: false
+  },
+  {
+    weather_id: 4,
+    city_name: "Chicago",
+    country_name: "United States",
+    notes: "",
+    private: false
+  },
+  {
+    weather_id: 5,
+    city_name: "Paris",
+    country_name: "France",
+    notes: "",
+    private: false
+  },
+  {
+    weather_id: 6,
+    city_name: "Hong Kong",
+    country_name: "China",
+    notes: "",
+    private: false
+  },
+  {
+    weather_id: 7,
+    city_name: "Los Angeles",
+    country_name: "United States",
+    notes: "",
+    private: false
+  },
+  {
+    weather_id: 8,
+    city_name: "Dubai",
+    country_name: "United Arab Emirates",
+    notes: "",
+    private: false
+  },
+  {
+    weather_id: 9,
+    city_name: "London",
+    country_name: "United Kingdom",
+    notes: "",
+    private: false
+  }
 ]
 
 
