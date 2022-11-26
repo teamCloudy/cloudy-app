@@ -6,7 +6,7 @@ const ProtectedUserIndex = ({ cities, weathers, logged_in, current_user }) => {
   return (
     <>
       <div>
-        <h3 className="centerTitle"> My Cities</h3>
+        <h3 className="centerTitle"> My Places</h3>
         {logged_in && (
           <div className="centerCard">
             {cities?.map((city, index) => {
@@ -27,6 +27,8 @@ const ProtectedUserIndex = ({ cities, weathers, logged_in, current_user }) => {
                           </CardTitle>
                           <CardSubtitle>
                             {city.country_name}
+                            <br />
+                            <img src={weather[0]?.icon} />
                             <br />
                             <h3>{weather[0]?.temperature} &#176;</h3>
                             <br />

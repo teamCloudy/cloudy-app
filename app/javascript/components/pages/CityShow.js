@@ -30,6 +30,7 @@ const CityShow = ({ cities, weathers }) => {
                   <br />
                   <strong>Weather: </strong>
                   {weather[0].current_weather}
+                  <img src={weather[0].icon} />
                   <br />
                   <strong>UV Index: </strong>
                   {weather[0].uv_index}
@@ -44,7 +45,6 @@ const CityShow = ({ cities, weathers }) => {
                   <br />
                   {weather[0].description}
                   <br />
-                  {weather[0].icon}
                 </CardSubtitle>
                 <NavLink to="/cityindex" className="nav-link">
                   <Button>Back</Button>

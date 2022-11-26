@@ -55,6 +55,8 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
                     <p>{weather[0].date}</p>
                     <h5>{weather[0].time}</h5>
                     <br />
+                    <img src={weather[0].icon} />
+                    <br />
                     <strong>Weather: </strong>
                     {weather[0].current_weather}
                     <br />
@@ -70,8 +72,6 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
                     <strong>Description: </strong>
                     <br />
                     {weather[0].description}
-                    <br />
-                    {weather[0].icon}
                     <br />
                     <strong>Location Notes: </strong>
                     <br />
