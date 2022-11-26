@@ -4,9 +4,11 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 
 const CityShow = ({ cities, weathers }) => {
   const { id } = useParams();
-  const showCity = cities?.find((city) => city.id === +id);
-  let weather = weathers;
   const navigate = useNavigate();
+  const showCity = cities?.find((city) => city.id === +id);
+  const weather = weathers?.filter(
+    (weather) => showCity.weather_id === weather.id
+  );
   return (
     <>
       <div className="cityShowPage">
@@ -19,14 +21,14 @@ const CityShow = ({ cities, weathers }) => {
                   <h4>{showCity.city_name}</h4>
                 </CardTitle>
                 <CardSubtitle>
-                  <h4>{showCity.country_name}</h4>
+                  <h6>{showCity.country_name}</h6>
                   <br />
                   <h3>{weather[0].temperature} &#176;</h3>
                   <br />
                   <strong>Last Updated: </strong>
                   <br />
                   <p>{weather[0].date}</p>
-                  <h5>{weather[0].time}</h5>
+                  <h5>{weathers[0].time}</h5>
                   <br />
                   <strong>Weather: </strong>
                   {weather[0].current_weather}

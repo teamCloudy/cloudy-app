@@ -8,12 +8,12 @@ weathers_seeds = [
     temperature: 52,
     time: "10:00AM",
     date: "2022-11-28",
-    current_weather: "Sunny",
+    current_weather: "Partly Cloudy",
     uv_index: 1,
     wind_speed: 11,
     humidity: 57,
-    description: "Partly Cloudy",
-    icon: "../day.svg",
+    description: "Scattered clouds",
+    icon: "../cloudy-day-1.svg",
   },
   # SYDNEY
   {
@@ -41,14 +41,14 @@ weathers_seeds = [
   },
   # CHICAGO
   {
-    temperature: 78,
+    temperature: 47,
     time: "9:00AM",
     date: "2022-11-28",
     current_weather: "Partly Cloudy",
     uv_index: 2,
     wind_speed: 9,
     humidity: 66,
-    description: "Normal temperatures, and clear skies",
+    description: "Low temperatures, and clear skies",
     icon: "../cloudy-day-1.svg",
   },
   # PARIS
@@ -65,7 +65,7 @@ weathers_seeds = [
   },
   # HONG KONG
   {
-    temperature: 78,
+    temperature: 80,
     time: "11:00PM",
     date: "2022-11-28",
     current_weather: "Scattered Thunderstorms",
@@ -77,7 +77,7 @@ weathers_seeds = [
   },
   # LOS ANGELES
   {
-    temperature: 78,
+    temperature: 63,
     time: "7:00AM",
     date: "2022-11-28",
     current_weather: "Partly Cloudy",
@@ -101,7 +101,7 @@ weathers_seeds = [
   },
   # LONDON
   {
-    temperature: 78,
+    temperature: 52,
     time: "3:00PM",
     date: "2022-11-28",
     current_weather: "Overcast",

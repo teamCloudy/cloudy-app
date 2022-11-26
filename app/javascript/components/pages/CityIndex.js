@@ -9,7 +9,7 @@ const CityIndex = ({ cities, weathers }) => {
         <h3 className="centerTitle">Popular Cities</h3>
         <div className="centerCard">
           {cities?.map((city, index) => {
-            let weather = weathers?.filter(
+            const weather = weathers?.filter(
               (weather) => city.weather_id === weather.id
             );
 
