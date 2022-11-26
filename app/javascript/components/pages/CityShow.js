@@ -38,7 +38,7 @@ const CityShow = ({ cities, weathers }) => {
                   {weather[0].icon}
                 </CardSubtitle>
                 <NavLink to="/cityindex" className="nav-link">
-                  <Button>Back Home</Button>
+                  <Button>Back</Button>
                 </NavLink>
               </CardBody>
             </Card>

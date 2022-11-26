@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, useNavigate, Navigate } from "react-router-dom";
+import { useParams, useNavigate, NavLink } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
@@ -51,7 +51,12 @@ const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
                 {" "}
                 Update Notes
               </Button>
-              <Button></Button>
+              <br />
+              <NavLink to="/protectedcityindex" className="nav-link">
+              <Button>
+              Back
+              </Button>
+              </NavLink>
             </div>
           </Form>
         </div>

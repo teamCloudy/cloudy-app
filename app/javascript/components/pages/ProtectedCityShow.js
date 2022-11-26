@@ -73,7 +73,7 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
                   </Button>
                   <Button onClick={handleClick}>Delete Location</Button>
                   <NavLink to="/cityindex" className="nav-link">
-                    <Button>Back Home</Button>
+                    <Button>Back</Button>
                   </NavLink>
                 </CardBody>
               </Card>
