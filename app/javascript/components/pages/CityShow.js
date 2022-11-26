@@ -38,7 +38,7 @@ const CityShow = ({ cities, weathers }) => {
                   {weather[0].wind_speed}
                   <br />
                   <strong>Humidity: </strong>
-                  {weather[0].humidity}
+                  {weather[0].humidity}%
                   <br />
                   <strong>Description: </strong>
                   <br />
