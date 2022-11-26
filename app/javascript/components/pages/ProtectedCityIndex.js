@@ -18,19 +18,22 @@ const ProtectedUserIndex = ({ cities, weathers, logged_in, current_user }) => {
                   <div key={index}>
                     {current_user.id === city.user_id && (
                       <Card
-                        style={{ width: "210px", height: "210px" }}
+                        style={{ width: "210px", height: "auto" }}
                         key={index}
                       >
                         <CardBody>
-                          <CardTitle key={index}>{city.city_name}</CardTitle>
+                          <CardTitle key={index}>
+                            <h4>{city.city_name}</h4>
+                          </CardTitle>
                           <CardSubtitle>
                             {city.country_name}
                             <br />
-                            {weather[0]?.temperature}
+                            <h3>{weather[0]?.temperature} &#176;</h3>
                             <br />
-                            {weather[0]?.time}
+                            <strong>Last Updated: </strong>
                             <br />
                             {weather[0]?.date}
+                            <h5>{weather[0]?.time}</h5>
                           </CardSubtitle>
                           <NavLink
                             to={`/protectedcityshow/${city.id}`}

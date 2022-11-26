@@ -42,27 +42,38 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
             <div className="centerCard">
               <Card style={{ width: "250px", height: "auto" }}>
                 <CardBody>
-                  <CardTitle>{showCity.city_name}</CardTitle>
+                  <CardTitle>
+                    <h4>{showCity.city_name}</h4>
+                  </CardTitle>
                   <CardSubtitle>
-                    {showCity.country_name}
+                    <h4>{showCity.country_name}</h4>
                     <br />
-                    {weather[0].temperature}
+                    <h3>{weather[0].temperature} &#176;</h3>
                     <br />
-                    {weather[0].time}
+                    <strong>Last Updated: </strong>
                     <br />
-                    {weather[0].date}
+                    <p>{weather[0].date}</p>
+                    <h5>{weather[0].time}</h5>
                     <br />
+                    <strong>Weather: </strong>
                     {weather[0].current_weather}
                     <br />
+                    <strong>UV Index: </strong>
                     {weather[0].uv_index}
                     <br />
-                    {weather[0].wind_speed}
+                    <strong>Wind Speed: </strong>
+                    {weather[0].wind_speed} mph
                     <br />
+                    <strong>Humidity: </strong>
                     {weather[0].humidity}
+                    <br />
+                    <strong>Description: </strong>
                     <br />
                     {weather[0].description}
                     <br />
                     {weather[0].icon}
+                    <br />
+                    <strong>Location Notes: </strong>
                     <br />
                     {showCity.notes}
                   </CardSubtitle>
@@ -72,7 +83,7 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
                     </NavLink>
                   </Button>
                   <Button onClick={handleClick}>Delete Location</Button>
-                  <NavLink to="/cityindex" className="nav-link">
+                  <NavLink to="/protectedcityindex" className="nav-link">
                     <Button>Back</Button>
                   </NavLink>
                 </CardBody>

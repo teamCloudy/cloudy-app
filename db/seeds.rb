@@ -5,18 +5,18 @@ user = User.where(email: "test@example.com").first_or_create(password: "password
 weathers_seeds = [
   {
     temperature: 78,
-    time: "07:00",
+    time: "7:00AM",
     date: "2022-11-28",
     current_weather: "Sunny",
     uv_index: 3,
     wind_speed: 9,
     humidity: 0,
-    description: "Normal tempearatures, and clear skies",
+    description: "Normal temperatures, and clear skies",
     icon: "../day.svg",
   },
   {
     temperature: 39,
-    time: "01:00",
+    time: "1:00PM",
     date: "2022-11-28",
     current_weather: "Snowing",
     uv_index: 0,
@@ -27,7 +27,7 @@ weathers_seeds = [
   },
   {
     temperature: 60,
-    time: "07:00",
+    time: "7:00PM",
     date: "2022-11-28",
     current_weather: "Windy",
     uv_index: 1,
@@ -38,7 +38,7 @@ weathers_seeds = [
   },
   {
     temperature: 37,
-    time: "04:00",
+    time: "4:00PM",
     date: "2022-11-28",
     current_weather: "Tornado",
     uv_index: 0,
@@ -49,7 +49,7 @@ weathers_seeds = [
   },
   {
     temperature: 77,
-    time: "08:00",
+    time: "8:00AM",
     date: "2022-11-28",
     current_weather: "Partly Cloudy",
     uv_index: 1,
@@ -60,7 +60,7 @@ weathers_seeds = [
   },
   {
     temperature: 80,
-    time: "01:00",
+    time: "1:00AM",
     date: "2022-11-28",
     current_weather: "Earthquake",
     uv_index: 3,
@@ -71,7 +71,7 @@ weathers_seeds = [
   },
   {
     temperature: 77,
-    time: "08:00",
+    time: "8:00PM",
     date: "2022-11-28",
     current_weather: "Partly Cloudy",
     uv_index: 1,
@@ -82,7 +82,7 @@ weathers_seeds = [
   },
   {
     temperature: 40,
-    time: "07:00",
+    time: "10:00AM",
     date: "2022-11-28",
     current_weather: "Hailing",
     uv_index: 5,
@@ -93,7 +93,7 @@ weathers_seeds = [
   },
   {
     temperature: 65,
-    time: "05:00",
+    time: "5:00AM",
     date: "2022-11-28",
     current_weather: "Cloudy",
     uv_index: 0,
@@ -104,7 +104,7 @@ weathers_seeds = [
   },
   {
     temperature: 43,
-    time: "07:00",
+    time: "3:00PM",
     date: "2022-11-28",
     current_weather: "Stormy",
     uv_index: 0,
@@ -115,7 +115,7 @@ weathers_seeds = [
   },
   {
     temperature: 64,
-    time: "07:00",
+    time: "12:00PM",
     date: "2022-11-28",
     current_weather: "Rainy",
     uv_index: 0,
@@ -126,7 +126,7 @@ weathers_seeds = [
   },
   {
     temperature: 110,
-    time: "07:00",
+    time: "9:00AM",
     date: "2022-11-28",
     current_weather: "Sunny",
     uv_index: 4,
@@ -137,7 +137,7 @@ weathers_seeds = [
   },
   {
     temperature: 46,
-    time: "07:00",
+    time: "4:00PM",
     date: "2022-11-28",
     current_weather: "Hailing",
     uv_index: 2,
@@ -148,24 +148,24 @@ weathers_seeds = [
   },
   {
     temperature: 76,
-    time: "07:00",
+    time: "11:00AM",
     date: "2022-11-28",
     current_weather: "Sunny",
     uv_index: 2,
     wind_speed: 9,
     humidity: 0,
-    description: "Normal tempearatures, clear skies, and a low pollen index",
+    description: "Normal temperatures, clear skies, and a low pollen index",
     icon: "url",
   },
   {
     temperature: 90,
-    time: "11:00",
+    time: "1:00PM",
     date: "2022-11-28",
     current_weather: "Sunny",
     uv_index: 3,
     wind_speed: 7,
     humidity: 0,
-    description: "High tempteratures, and Clear skies",
+    description: "High temperatures, and clear skies",
     icon: "../thunder.svg",
   }
 ]
