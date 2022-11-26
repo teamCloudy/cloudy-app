@@ -5,8 +5,10 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
   const navigate = useNavigate();
   const { id } = useParams();
-  let weather = weathers;
   const showCity = cities?.find((city) => city.id === +id);
+  let weather = weathers?.filter(
+    (weather) => showCity.weather_id === weather.id
+  );
 
   const handleClick = () => {
     if (current_user.id !== showCity.user_id) {
@@ -46,7 +48,7 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
                     <h4>{showCity.city_name}</h4>
                   </CardTitle>
                   <CardSubtitle>
-                    <h4>{showCity.country_name}</h4>
+                    <h6>{showCity.country_name}</h6>
                     <br />
                     <h3>{weather[0].temperature} &#176;</h3>
                     <br />
