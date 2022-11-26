@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, NavLink } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 const CityNew = ({ weathers, createCity, current_user }) => {
@@ -265,6 +265,12 @@ const CityNew = ({ weathers, createCity, current_user }) => {
               <Button onClick={handleSubmit} name="submit">
                 Add City
               </Button>
+              <br />
+              <NavLink to="/protectedcityindex" className="nav-link">
+              <Button>
+              Back
+              </Button>
+              </NavLink>
             </div>
           </Form>
         </div>
