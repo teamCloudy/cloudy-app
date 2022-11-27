@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Navigate, useNavigate, NavLink } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import weather from "../mockWeathers";
 
 const CityNew = ({ weathers, createCity, current_user }) => {
   const navigate = useNavigate();
-  const getWeather = Math.ceil(Math.random() * (weathers.length - 1)) + 1;
+  const getWeather = Math.floor(Math.random() * (weathers.length - 1 + 1) + 1);
+
   const [newCity, setNewCity] = useState({
     user_id: current_user.id,
     weather_id: getWeather,
@@ -16,11 +18,16 @@ const CityNew = ({ weathers, createCity, current_user }) => {
 
   const handleChange = (e) => {
     setNewCity({ ...newCity, [e.target.name]: e.target.value });
+    console.log(getWeather);
     console.log(e.target.name, e.target.value);
   };
 
   const handleSubmit = () => {
     createCity(newCity);
+    console.log("Weather ID I want to use --> ", getWeather);
+    console.log("Weather array --> ", weathers);
+    console.log("New City --> ", newCity);
+    console.log("New weather ID --> ", newCity.weather_id);
     navigate("/protectedcityindex");
   };
 
@@ -271,9 +278,9 @@ const CityNew = ({ weathers, createCity, current_user }) => {
               </Button>
               <br />
               <NavLink to="/protectedcityindex" className="nav-link">
-              <Button className="back-btn">
-              Back
-              </Button>
+                <Button className="back-btn">
+                Back
+                </Button>
               </NavLink>
             </div>
           </Form>
