@@ -18,6 +18,8 @@ const App = (props) => {
   const [cities, setCities] = useState([]);
   const [weathers, setWeathers] = useState([]);
 
+  const getWeather = Math.floor(Math.random() * weathers.length + 1);
+
   useEffect(() => {
     readCities();
   }, []);
@@ -121,7 +123,12 @@ const App = (props) => {
         <Route
           path="/citynew"
           element={
-            <CityNew weathers={weathers} createCity={createCity} {...props} />
+            <CityNew
+              weathers={weathers}
+              createCity={createCity}
+              {...props}
+              getWeather={getWeather}
+            />
           }
         />
         <Route
