@@ -9,7 +9,9 @@ const AboutUs = () => {
 
     return (
         <>
+         <div class="mask">
             <div class="p-5 text-center bg-image meet-team-bg">
+               
                 <h1 className="meet-the-team">
                     Meet the Team
                 </h1>
@@ -62,7 +64,7 @@ const AboutUs = () => {
                                         Project Manager
                                     </CardSubtitle>
 
-                                    <Button href="https://www.linkedin.com/" target="_blank">
+                                    <Button href="https://www.linkedin.com/in/athian-camberos-41a91b241/" target="_blank">
                                         My LinkedIn
                                     </Button>
                                 </CardBody>
@@ -88,7 +90,7 @@ const AboutUs = () => {
                                         Tech Lead
                                     </CardSubtitle>
 
-                                    <Button href="https://www.linkedin.com/" target="_blank">
+                                    <Button href="https://www.linkedin.com/in/joseph-han-34a762194/" target="_blank">
                                         My LinkedIn
                                     </Button>
                                 </CardBody>
@@ -122,6 +124,7 @@ const AboutUs = () => {
                         </Col>
                     </Row>
                 </main>
+                </div>
             </div>
         </>
     )

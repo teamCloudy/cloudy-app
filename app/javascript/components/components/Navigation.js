@@ -12,7 +12,7 @@ const Navigation = ({
   return (
     <nav
       className="navbar navbar-expand-lg"
-      style={{ backgroundColor: "#000000", marginBottom: "0" }}
+      style={{ backgroundColor: "#000000", marginBottom: "0", zIndex: "1" }}
     >
       <div className="container-fluid">
         <a className="navbar-brand text-white" href="/">
