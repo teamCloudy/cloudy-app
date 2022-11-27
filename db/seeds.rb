@@ -101,7 +101,7 @@ weathers_seeds = [
   },
   # LONDON
   {
-    temperature: 52,
+    temperature: 50,
     time: "3:00PM",
     date: "2022-11-28",
     current_weather: "Overcast",

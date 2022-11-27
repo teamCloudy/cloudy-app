@@ -6,10 +6,10 @@ const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
   const navigate = useNavigate();
   const { id } = useParams();
   const currentCity = cities?.find((city) => city.id === +id);
-  const getWeather = Math.floor(Math.random() * weathers.length);
+  // const getWeather = Math.ceil(Math.random() * (weathers.length - 1)) + 1;
   const [updateNotes, setUpdateNotes] = useState({
     user_id: current_user.id,
-    weather_id: getWeather,
+    weather_id: currentCity.weather_id,
     city_name: currentCity?.city_name,
     country_name: currentCity?.country_name,
     notes: currentCity?.notes,
@@ -24,7 +24,6 @@ const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
     editNotes(updateNotes, currentCity.id);
     navigate("/protectedcityindex");
   };
-
   return (
     <>
       <div className="form">
@@ -53,9 +52,7 @@ const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
               </Button>
               <br />
               <NavLink to="/protectedcityindex" className="nav-link">
-              <Button>
-              Back
-              </Button>
+                <Button>Back</Button>
               </NavLink>
             </div>
           </Form>
