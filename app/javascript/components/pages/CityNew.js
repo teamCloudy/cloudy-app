@@ -33,7 +33,11 @@ const CityNew = ({ weathers, createCity, current_user }) => {
 
   return (
     <>
-      <div className="form">
+   <div class="bg-image add-cities-bg">
+        <div class="mask-my-cities">
+          <h1 className="popular-cities-title">ADD NEW CITY </h1> 
+          <main className="add-city-cards">
+      <div className="add-city-form">
         <div className="form-card">
           <Form>
             <FormGroup>
@@ -269,17 +273,23 @@ const CityNew = ({ weathers, createCity, current_user }) => {
               />
             </FormGroup>
             <div className="center-flex">
-              <Button onClick={handleSubmit} name="submit">
+              <Button className="add-city-btn" onClick={handleSubmit} name="submit">
                 Add City
               </Button>
               <br />
               <NavLink to="/protectedcityindex" className="nav-link">
-                <Button>Back</Button>
+                <Button className="back-btn">
+                Back
+                </Button>
               </NavLink>
             </div>
           </Form>
         </div>
       </div>
+      </main>
+      </div>
+      </div>
+    
     </>
   );
 };

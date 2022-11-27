@@ -1,59 +1,69 @@
 import React from "react";
-import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
+import { Card, CardBody, CardTitle, CardSubtitle, Button, Row, Col } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
 const ProtectedUserIndex = ({ cities, weathers, logged_in, current_user }) => {
   return (
     <>
-      <div>
-        <h3 className="centerTitle"> My Places</h3>
-        {logged_in && (
-          <div className="centerCard">
-            {cities?.map((city, index) => {
-              let weather = weathers?.filter(
-                (weather) => city.weather_id === weather.id
-              );
-              if (city.private === true) {
-                return (
-                  <div key={index}>
-                    {current_user.id === city.user_id && (
-                      <Card
-                        style={{ width: "210px", height: "auto" }}
-                        key={index}
-                      >
-                        <CardBody>
-                          <CardTitle key={index}>
-                            <h4>{city.city_name}</h4>
-                          </CardTitle>
-                          <CardSubtitle>
-                            {city.country_name}
-                            <br />
-                            <img src={weather[0]?.icon} />
-                            <br />
-                            <h3>{weather[0]?.temperature} &#176;</h3>
-                            <br />
-                            <strong>Last Updated: </strong>
-                            <br />
-                            {weather[0]?.date}
-                            <h5>{weather[0]?.time}</h5>
-                          </CardSubtitle>
-                          <NavLink
-                            to={`/protectedcityshow/${city.id}`}
-                            className="nav-link"
-                          >
-                            <Button> See More Details</Button>
-                          </NavLink>
-                        </CardBody>
-                      </Card>
-                    )}
-                  </div>
+      <div class="bg-image my-cities-bg">
+        <div class="mask-my-cities">
+          <h1 className="popular-cities-title">My Places </h1>
+          {logged_in && (
+            <main className="city-index-cards">
+              {cities?.map((city, index) => {
+                let weather = weathers?.filter(
+                  (weather) => city.weather_id === weather.id
                 );
-              }
-            })}
-          </div>
-        )}
-        {!logged_in && <h1> Please Log In</h1>}
+                if (city.private === true) {
+                  return (
+                    <div key={index}>
+                      {current_user.id === city.user_id && (
+                        <Row>
+                          <Col xs="4">
+                            <Card className="card-index" key={index}>
+                              <CardBody>
+                                <CardTitle key={index}>
+                                  <h4>{city.city_name}</h4>
+                                </CardTitle>
+                                <CardSubtitle>
+                                  {city.country_name}
+                                  <br />
+                                  <img src={weather[0]?.icon} />
+                                  <br />
+                                  <h3>{weather[0]?.temperature} &#176;</h3>
+                                  <br />
+                                  <strong>Last Updated: </strong>
+                                  <br />
+                                  {weather[0]?.date}
+                                  <h5>{weather[0]?.time}</h5>
+                                </CardSubtitle>
+                                <NavLink
+                                  to={`/protectedcityshow/${city.id}`}
+                                  className="nav-link"
+                                >
+                                  <Button className="more-details-btn"> See More Details</Button>
+                                </NavLink>
+                              </CardBody>
+                            </Card>
+                          </Col>
+                        </Row>
+                      )}
+                    </div>
+
+                  );
+                }
+              })}
+
+            </main>
+
+
+          )}
+
+          {!logged_in && <h1> Please Log In</h1>}
+
+        </div>
       </div>
+
     </>
   );
 };
