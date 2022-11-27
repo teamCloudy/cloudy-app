@@ -403,7 +403,7 @@ user_cities_seeds = [
   },
   {
     weather_id: 2,
-    city_name: "Sidney",
+    city_name: "Sydney",
     country_name: "Australia",
     notes: "",
     private: false
