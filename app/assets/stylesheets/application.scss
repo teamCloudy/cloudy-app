@@ -170,15 +170,12 @@ background-repeat: no-repeat;
 .main {
   width: 100%;
   height: 110vh;
- 
-
 }
 
 video {
   width: 100%;
   height: 110vh;
   object-fit: cover;
-
 }
 .content {
   position: absolute;
@@ -232,10 +229,11 @@ video {
   color: white;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px #000000;
+
 }
 
 .popular-cities-bg {
-  background: url("https://images.pexels.com/photos/121449/nature-landscape-night-stars-121449.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background: url("https://images.pexels.com/photos/4737484/pexels-photo-4737484.jpeg?auto=compress&cs=tinysrgb&w=800");
 background-size: cover; 
 height: 1800px;
 background-repeat: no-repeat;
@@ -271,7 +269,7 @@ background-repeat: no-repeat;
 /* My Cities */
 
 .my-cities-bg {
-  background: url("https://images.pexels.com/photos/121449/nature-landscape-night-stars-121449.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background: url("https://images.pexels.com/photos/4737484/pexels-photo-4737484.jpeg?auto=compress&cs=tinysrgb&w=800");
   background-size: cover; 
   height: 1000px;
   background-repeat: no-repeat;
@@ -323,3 +321,143 @@ background-repeat: no-repeat;
   .back-btn {
     width: 200px;
   }
+
+  /* Show City */
+
+  .show-city-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px; /*it adds space  20px between cards*/
+  padding-top: 100px;
+  margin-bottom: 100px;
+  align-content: center;
+  height: 800px;
+  }
+  // .show-main {
+  //   width: 100%;
+  //   height: auto;
+  // }
+  .show-city-bg {
+    background: url("https://images.pexels.com/photos/4737484/pexels-photo-4737484.jpeg?auto=compress&cs=tinysrgb&w=800");
+    background-size: cover; 
+    height: 100%;
+    background-repeat: no-repeat;
+
+  }
+
+  .mask-show {
+  background-color: rgba(0, 0, 0, .5);
+  height: 800px;
+  }
+
+  .card-show {
+    width: 35rem;
+    min-height: 480px;
+    margin-left: 25px;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border-radius: 45px;
+    // background: rgba(225, 225, 225, 0.2);
+    color: white;
+  }
+
+  hr.separate-show {
+    border: 2px solid white;
+    width: 300px;
+  }
+
+  .back-btn-show {
+    width: 200px;
+    color: #000000;
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    border: 2px solid gray;
+  }
+
+  .mask-card-show-city{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 45px;
+    height: 650px;
+  }
+
+  .card-show-bg-image {
+ 
+      background: url("https://images.pexels.com/photos/210205/pexels-photo-210205.jpeg?auto=compress&cs=tinysrgb&w=800");
+    background-size: cover; 
+    height: 650px;
+    background-repeat: no-repeat;
+
+  }
+
+  /* Show My City */
+
+  .card-my-city-show {
+      width: 35rem;
+      min-height: 480px;
+      margin-left: 25px;
+      box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+      border-radius: 45px;
+      // background: rgba(225, 225, 225, 0.2);
+      color: white;
+    }
+
+    .card-my-city-show-bg-image {
+      background: url("https://images.pexels.com/photos/210205/pexels-photo-210205.jpeg?auto=compress&cs=tinysrgb&w=800");
+      background-size: cover; 
+      height: 750px;
+      background-repeat: no-repeat;
+    }
+
+    .mask-card-my-city-show{
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 45px;
+      height: 750px;
+    }
+
+  .display-flex-buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .back-btn-protected-show {
+
+    display: flex;
+   justify-content: center;
+    
+  }
+.back-btn-my-city-show {  
+  width: 200px;
+  color: #000000;
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  border: 2px solid gray;
+}
+
+.back-btn-my-city-show-back {
+  width: 450px;
+  color: #000000;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  border: 2px solid gray;
+}
+
+.notes-country-title {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.notes-city-title {
+  text-align: center;
+  padding-top: 10px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}

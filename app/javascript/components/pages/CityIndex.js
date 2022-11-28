@@ -22,7 +22,6 @@ const CityIndex = ({ cities, weathers }) => {
                 return (
 
                   <Row>
-
                     <Col xs="4">
                       <Card className="card-index" key={index}>
                         <CardBody>

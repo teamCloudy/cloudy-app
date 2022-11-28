@@ -26,14 +26,18 @@ const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
   };
   return (
     <>
-      <div className="form">
+    <div class="show-main">
+      <div class="bg-image show-city-bg ">
+        <div class="mask-popular-cities">
+        <main className="show-city-cards">
+      <div className="add-city-form">
         <div className="form-card">
           <Form>
-            <div>
+            <h3 className="notes-city-title">
               {currentCity?.city_name}
-              <br />
-              {currentCity?.country_name}
-            </div>
+              </h3>
+             <h4 className="notes-country-title">{currentCity?.country_name}
+             </h4> 
             <FormGroup>
               <Label for="notes">Notes</Label>
               <Input
@@ -57,6 +61,10 @@ const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
             </div>
           </Form>
         </div>
+      </div>
+      </main>
+      </div>
+      </div>
       </div>
     </>
   );
