@@ -11,7 +11,7 @@ const CityShow = ({ cities, weathers }) => {
   );
   return (
     <>
-    <div class="show-main">
+   
       <div class="bg-image show-city-bg ">
         <div class="mask-popular-cities">
 
@@ -73,7 +73,7 @@ const CityShow = ({ cities, weathers }) => {
           </main>
         </div>
       </div>
-      </div>
+   
     </>
   );
 };
