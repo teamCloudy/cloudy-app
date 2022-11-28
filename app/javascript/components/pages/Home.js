@@ -28,18 +28,8 @@ const Home = ({ new_user_route, sign_in_route, logged_in, current_user }) => {
         {logged_in && (
           <div className="container-fluid content">
             <div className="col-7">
-              <h1 class="title"> Cloudy Weather App</h1>
-              <h3 class="mb-3"> WELCOME {current_user.username}!</h3>
-              <p>
-                This is our app called CLOUDY. We are your personal weather app,
-                to help you keep tabs of your favorite locations in the world.
-                Whether you have friends and family all over the world, or you
-                travel often, our app will help you stay informed 24/7. So what
-                makes us different from our competitors? You can enjoy our app,
-                ad free, we won't sell your personal data to advertisers. All of
-                your locations will be private to your account. Your personal
-                data is secured on our website.
-              </p>
+              <h1 class="title"> CLOUDY WEATHER APP</h1>
+              <h3 class="mb-3"> Welcome {current_user.username}!</h3>
 
               <button
                 class="btn btn-outline-secondary col-3 col-3 m-3 border border-white btn-home"
@@ -63,7 +53,8 @@ const Home = ({ new_user_route, sign_in_route, logged_in, current_user }) => {
         {!logged_in && (
           <div className="container-fluid content">
             <div class="col-8">
-              <h1 class="m-3"> ALWAYS BE ON TOP OF THE WEATHER</h1>
+              <h1 class="m-3">
+              ALWAYS BE ON TOP OF THE WEATHER</h1>
 
               <button class="btn btn-outline-secondary col-3  col-3 m-3 btn-lg btn-home">
                 <a href={sign_in_route} className="nav-link">
