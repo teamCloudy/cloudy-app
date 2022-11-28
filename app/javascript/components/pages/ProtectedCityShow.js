@@ -86,17 +86,23 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
                     {showCity.notes}
                   </CardSubtitle>
                   <div className="display-flex-buttons">
-                    <NavLink to={`/cityedit/${showCity.id}`} >
-                    <Button className="back-btn-my-city-show">
+                  
+                    <button class="btn btn-outline-secondary col-5 col-3 m-3 btn-lg">
+                    <NavLink to={`/cityedit/${showCity.id}`} className="nav-link">
                       Edit Notes
-                      </Button>
-                    </NavLink>
-                  <Button className="back-btn-my-city-show" onClick={handleClick}>Delete Location</Button>
+                      </NavLink>
+                      </button>
+                
+                  <button class="btn btn-outline-secondary col-5  col-3 m-3 btn-lg" onClick={handleClick}>Delete Location</button>
                   </div>
                   <div className="back-btn-protected-show">
-                  <NavLink to="/protectedcityindex" className="nav-link">
-                    <Button className="back-btn-my-city-show-back">Back</Button>
-                  </NavLink>
+                    
+                  <button class="btn btn-outline-secondary col-11  col-3 m-3 btn-lg">
+                  <a href="/protectedcityindex" className="nav-link">
+                   Back
+                    </a>
+                    </button>
+                
                   </div>
                  </CardBody>
           </div>
