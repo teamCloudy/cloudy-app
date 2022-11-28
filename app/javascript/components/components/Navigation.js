@@ -51,7 +51,7 @@ const Navigation = ({
                 </li>
                 <li className="nav-item">
                   <a className="nav-link text-white" href="/citynew">
-                    Add a New Location
+                    Add New Location
                   </a>
                 </li>
 
