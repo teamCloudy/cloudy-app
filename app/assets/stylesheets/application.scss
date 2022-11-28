@@ -10,9 +10,8 @@
 }
 
 .navigation {
-  display: flex;
-  align-items: baseline;
-
+    display: flex;
+    align-items: baseline;
     padding-bottom: 20px;
     padding-right: 40px;
     padding-top: 30px;
@@ -120,7 +119,6 @@ margin-left: 20px;
   color: transparent;
 }
 
-
 /* AboutUs | reactstrap */
 
 .card {
@@ -205,22 +203,6 @@ video {
   margin-bottom: 30px;
 }
 
-/* Index Carousel */
-.card-wrapper {
-  display: flex;
-  justify-content: center;
-} 
-.carousel-card {
-  margin: 0 0 .5em;
-  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-  // border: none;
-  // border-radius: 0;
-}
-.carousel-inner {
-  padding: 1em;
-
-}
-
 /* Index Cards */
 
 .popular-cities-title {
@@ -233,7 +215,7 @@ video {
 }
 
 .popular-cities-bg {
-  background: url("https://images.pexels.com/photos/4737484/pexels-photo-4737484.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background: url("https://images.pexels.com/photos/2480685/pexels-photo-2480685.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
 background-size: cover; 
 height: 1800px;
 background-repeat: no-repeat;
@@ -262,7 +244,7 @@ background-repeat: no-repeat;
   margin: 0 0 1em;
   box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border-radius: 45px;
-  background: rgba(225, 225, 225, 0.2);
+  background: rgba(225, 225, 225, 0.3);
   color: white;
 }
 
@@ -348,7 +330,7 @@ background-repeat: no-repeat;
 
   .mask-show {
   background-color: rgba(0, 0, 0, .5);
-  height: 800px;
+  height: 1000px;
   }
 
   .card-show {
@@ -404,16 +386,16 @@ background-repeat: no-repeat;
     }
 
     .card-my-city-show-bg-image {
-      background: url("https://images.pexels.com/photos/210205/pexels-photo-210205.jpeg?auto=compress&cs=tinysrgb&w=800");
+      background: url("https://images.pexels.com/photos/2480685/pexels-photo-2480685.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
       background-size: cover; 
-      height: 750px;
+      height: 800px;
       background-repeat: no-repeat;
     }
 
     .mask-card-my-city-show{
       background-color: rgba(0, 0, 0, 0.3);
       border-radius: 45px;
-      height: 750px;
+      height: 800px;
     }
 
   .display-flex-buttons {
@@ -460,4 +442,24 @@ background-repeat: no-repeat;
   padding-top: 10px;
   color: white;
   text-shadow: 2px 2px 4px #000000;
+}
+
+/* Not Found */
+
+.btn-notfound {
+ border: 2px solid gray;
+}
+
+.notfound-video {
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
+}
+.overlay-notfound-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 135vh;
+  background-color: rgba(0, 0, 0, .5);
 }

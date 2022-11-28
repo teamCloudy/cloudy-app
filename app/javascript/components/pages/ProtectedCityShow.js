@@ -38,10 +38,10 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
   } else if (current_user.id === showCity.user_id) {
     return (
       <>
-        <div className="show-main">
+     
         <div class="bg-image show-city-bg ">
         <div class="mask-popular-cities">
-          <h3 className="popular-cities-title"> More Details</h3>
+          <h1 className="popular-cities-title"> MORE DETAILS</h1>
           <main className="show-city-cards">
 
           {showCity && (
@@ -107,7 +107,6 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
             
           )}
           </main>
-        </div>
         </div>
         </div>
       </>
