@@ -38,7 +38,7 @@ const CityShow = ({ cities, weathers }) => {
                           <strong>Last Updated: </strong>
                           <br />
                           <p>{weather[0].date}</p>
-                          <h5>{weathers[0].time}</h5>
+                          <h5>{weather[0].time}</h5>
 
                           <hr className="my-4 separate-show" />
                           <strong>Weather: </strong>
