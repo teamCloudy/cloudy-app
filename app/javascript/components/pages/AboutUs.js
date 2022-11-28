@@ -38,7 +38,7 @@ const AboutUs = () => {
                                         Product Manager
                                     </CardSubtitle>
 
-                                    <Button href="https://www.linkedin.com/" target="_blank">
+                                    <Button href="https://www.linkedin.com/in/kyletle/" target="_blank">
                                         My LinkedIn
                                     </Button>
                                 </CardBody>
