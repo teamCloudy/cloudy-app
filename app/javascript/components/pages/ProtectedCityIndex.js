@@ -16,7 +16,7 @@ const ProtectedUserIndex = ({ cities, weathers, logged_in, current_user }) => {
                 );
                 if (city.private === true) {
                   return (
-                    <div key={index}>
+                    <>
                       {current_user.id === city.user_id && (
                         <Row>
                           <Col xs="4">
@@ -41,29 +41,24 @@ const ProtectedUserIndex = ({ cities, weathers, logged_in, current_user }) => {
                                   to={`/protectedcityshow/${city.id}`}
                                   className="nav-link"
                                 >
-                                  <Button className="more-details-btn"> See More Details</Button>
+                                  <Button className="more-details-btn"> SEE MORE DETAILS </Button>
                                 </NavLink>
                               </CardBody>
                             </Card>
                           </Col>
                         </Row>
                       )}
-                    </div>
-
+                    </>
                   );
                 }
               })}
-
             </main>
-
-
           )}
 
           {!logged_in && <h1> Please Log In</h1>}
-
+          
         </div>
       </div>
-
     </>
   );
 };

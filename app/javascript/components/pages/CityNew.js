@@ -206,7 +206,6 @@ const CityNew = ({ createCity, current_user, getWeather }) => {
                 <option>Portugal</option>
                 <option>Qatar</option>
                 <option>Romania</option>
-                <option>Russian Federation</option>
                 <option>Rwanda</option>
                 <option>St Kitts & Nevis</option>
                 <option>St Lucia</option>
@@ -274,12 +273,12 @@ const CityNew = ({ createCity, current_user, getWeather }) => {
             </FormGroup>
             <div className="center-flex">
               <Button className="add-city-btn" onClick={handleSubmit} name="submit">
-                Add City
+                ADD CITY
               </Button>
               <br />
               <NavLink to="/protectedcityindex" className="nav-link">
                 <Button className="back-btn">
-                Back
+                BACK
                 </Button>
               </NavLink>
             </div>

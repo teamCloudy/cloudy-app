@@ -27,8 +27,8 @@ const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
   return (
     <>
     <div class="show-main">
-      <div class="bg-image show-city-bg ">
-        <div class="mask-popular-cities">
+      <div class="bg-image show-city-edit-bg">
+        <div class="mask-popular-cities-edit">
         <main className="show-city-cards">
       <div className="add-city-form">
         <div className="form-card">
@@ -52,11 +52,11 @@ const CityEdit = ({ cities, weathers, current_user, editNotes }) => {
             <div className="center-flex">
               <Button onClick={handleSubmit} name="submit">
                 {" "}
-                Update Notes
+                UPDATE NOTES
               </Button>
               <br />
               <NavLink to="/protectedcityindex" className="nav-link">
-                <Button>Back</Button>
+                <Button>BACK</Button>
               </NavLink>
             </div>
           </Form>

@@ -11,8 +11,6 @@ const CityIndex = ({ cities, weathers }) => {
           <h1 className="popular-cities-title">Popular Cities</h1>
 
           <main className="city-index-cards">
-
-
             {cities?.map((city, index) => {
               const weather = weathers?.filter(
                 (weather) => city.weather_id === weather.id
@@ -42,7 +40,7 @@ const CityIndex = ({ cities, weathers }) => {
                             <br />
                           </CardSubtitle>
                           <NavLink to={`/cityshow/${city.id}`} className="nav-link">
-                            <Button> See More Details</Button>
+                            <Button> SEE MORE DETAILS </Button>
                           </NavLink>
                         </CardBody>
                       </Card>

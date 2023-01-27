@@ -13,7 +13,8 @@ const CityShow = ({ cities, weathers }) => {
     <>
    
       <div class="bg-image show-city-bg ">
-        <div class="mask-popular-cities">
+        {/* change the class name for mask*/}
+        <div class="mask-show"> 
 
           <h1 className="popular-cities-title">MORE DETAILS</h1>
           <main className="show-city-cards">
@@ -60,7 +61,7 @@ const CityShow = ({ cities, weathers }) => {
                           <br />
                         </CardSubtitle>
                         <NavLink to="/cityindex" className="nav-link">
-                          <Button className="back-btn-show">Back</Button>
+                          <button class="btn btn-outline-secondary col-5 col-3 m-3 btn-lg btn-home btn-notfound">BACK</button>
                         </NavLink>
                       </CardBody>
                     </div>

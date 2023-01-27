@@ -36,14 +36,14 @@ const Home = ({ new_user_route, sign_in_route, logged_in, current_user }) => {
                 onClick={() => handleSubmit("user-index")}
                 name="submit"
               >
-                My Places
+                MY PLACES
               </button>
               <button
                 class="btn btn-outline-secondary col-3  col-3 m-3 border border-white"
                 onClick={() => handleSubmit("index")}
                 name="submit"
               >
-                Popular Cities
+                POPULAR CITIES
               </button>
             </div>
           </div>

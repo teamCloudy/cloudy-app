@@ -39,10 +39,10 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
     return (
       <>
      
-        <div class="bg-image show-city-bg ">
-        <div class="mask-popular-cities">
+        <div class="bg-image show-my-city-bg ">
+        <div class="mask-my-show">
           <h1 className="popular-cities-title"> MORE DETAILS</h1>
-          <main className="show-city-cards">
+          <main className="show-my-city-cards">
 
           {showCity && (
             <Row>
@@ -89,17 +89,17 @@ const ProtectedCityShow = ({ cities, weathers, current_user, deleteCity }) => {
                   
                     <button class="btn btn-outline-secondary col-5 col-3 m-3 btn-lg">
                     <NavLink to={`/cityedit/${showCity.id}`} className="nav-link">
-                      Edit Notes
+                      EDIT NOTES
                       </NavLink>
                       </button>
                 
-                  <button class="btn btn-outline-secondary col-5  col-3 m-3 btn-lg" onClick={handleClick}>Delete Location</button>
+                  <button class="btn btn-outline-secondary col-5  col-3 m-3 btn-lg" onClick={handleClick}>DELETE LOCATION </button>
                   </div>
                   <div className="back-btn-protected-show">
                     
                   <button class="btn btn-outline-secondary col-11  col-3 m-3 btn-lg">
                   <a href="/protectedcityindex" className="nav-link">
-                   Back
+                   BACK
                     </a>
                     </button>
                 
